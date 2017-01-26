@@ -1,0 +1,174 @@
+##fileformat=VCFv4.1
+##fileDate=20160611
+##source=strelka
+##source_version=2.0.17.strelka1
+##startTime=Sat Jun 11 05:11:13 2016
+##reference=file:///demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta
+##contig=<ID=1,length=249250621>
+##contig=<ID=2,length=243199373>
+##contig=<ID=3,length=198022430>
+##contig=<ID=4,length=191154276>
+##contig=<ID=5,length=180915260>
+##contig=<ID=6,length=171115067>
+##contig=<ID=7,length=159138663>
+##contig=<ID=8,length=146364022>
+##contig=<ID=9,length=141213431>
+##contig=<ID=10,length=135534747>
+##contig=<ID=11,length=135006516>
+##contig=<ID=12,length=133851895>
+##contig=<ID=13,length=115169878>
+##contig=<ID=14,length=107349540>
+##contig=<ID=15,length=102531392>
+##contig=<ID=16,length=90354753>
+##contig=<ID=17,length=81195210>
+##contig=<ID=18,length=78077248>
+##contig=<ID=19,length=59128983>
+##contig=<ID=20,length=63025520>
+##contig=<ID=21,length=48129895>
+##contig=<ID=22,length=51304566>
+##contig=<ID=X,length=155270560>
+##contig=<ID=Y,length=59373566>
+##contig=<ID=MT,length=16569>
+##contig=<ID=GL000207.1,length=4262>
+##contig=<ID=GL000226.1,length=15008>
+##contig=<ID=GL000229.1,length=19913>
+##contig=<ID=GL000231.1,length=27386>
+##contig=<ID=GL000210.1,length=27682>
+##contig=<ID=GL000239.1,length=33824>
+##contig=<ID=GL000235.1,length=34474>
+##contig=<ID=GL000201.1,length=36148>
+##contig=<ID=GL000247.1,length=36422>
+##contig=<ID=GL000245.1,length=36651>
+##contig=<ID=GL000197.1,length=37175>
+##contig=<ID=GL000203.1,length=37498>
+##contig=<ID=GL000246.1,length=38154>
+##contig=<ID=GL000249.1,length=38502>
+##contig=<ID=GL000196.1,length=38914>
+##contig=<ID=GL000248.1,length=39786>
+##contig=<ID=GL000244.1,length=39929>
+##contig=<ID=GL000238.1,length=39939>
+##contig=<ID=GL000202.1,length=40103>
+##contig=<ID=GL000234.1,length=40531>
+##contig=<ID=GL000232.1,length=40652>
+##contig=<ID=GL000206.1,length=41001>
+##contig=<ID=GL000240.1,length=41933>
+##contig=<ID=GL000236.1,length=41934>
+##contig=<ID=GL000241.1,length=42152>
+##contig=<ID=GL000243.1,length=43341>
+##contig=<ID=GL000242.1,length=43523>
+##contig=<ID=GL000230.1,length=43691>
+##contig=<ID=GL000237.1,length=45867>
+##contig=<ID=GL000233.1,length=45941>
+##contig=<ID=GL000204.1,length=81310>
+##contig=<ID=GL000198.1,length=90085>
+##contig=<ID=GL000208.1,length=92689>
+##contig=<ID=GL000191.1,length=106433>
+##contig=<ID=GL000227.1,length=128374>
+##contig=<ID=GL000228.1,length=129120>
+##contig=<ID=GL000214.1,length=137718>
+##contig=<ID=GL000221.1,length=155397>
+##contig=<ID=GL000209.1,length=159169>
+##contig=<ID=GL000218.1,length=161147>
+##contig=<ID=GL000220.1,length=161802>
+##contig=<ID=GL000213.1,length=164239>
+##contig=<ID=GL000211.1,length=166566>
+##contig=<ID=GL000199.1,length=169874>
+##contig=<ID=GL000217.1,length=172149>
+##contig=<ID=GL000216.1,length=172294>
+##contig=<ID=GL000215.1,length=172545>
+##contig=<ID=GL000205.1,length=174588>
+##contig=<ID=GL000219.1,length=179198>
+##contig=<ID=GL000224.1,length=179693>
+##contig=<ID=GL000223.1,length=180455>
+##contig=<ID=GL000195.1,length=182896>
+##contig=<ID=GL000212.1,length=186858>
+##contig=<ID=GL000222.1,length=186861>
+##contig=<ID=GL000200.1,length=187035>
+##contig=<ID=GL000193.1,length=189789>
+##contig=<ID=GL000194.1,length=191469>
+##contig=<ID=GL000225.1,length=211173>
+##contig=<ID=GL000192.1,length=547496>
+##content=strelka somatic indel calls
+##germlineIndelTheta=0.0001
+##priorSomaticIndelRate=1e-06
+##INFO=<ID=QSI,Number=1,Type=Integer,Description="Quality score for any somatic variant, ie. for the ALT haplotype to be present at a significantly different frequency in the tumor and normal">
+##INFO=<ID=TQSI,Number=1,Type=Integer,Description="Data tier used to compute QSI">
+##INFO=<ID=NT,Number=1,Type=String,Description="Genotype of the normal in all data tiers, as used to classify somatic variants. One of {ref,het,hom,conflict}.">
+##INFO=<ID=QSI_NT,Number=1,Type=Integer,Description="Quality score reflecting the joint probability of a somatic variant and NT">
+##INFO=<ID=TQSI_NT,Number=1,Type=Integer,Description="Data tier used to compute QSI_NT">
+##INFO=<ID=SGT,Number=1,Type=String,Description="Most likely somatic genotype excluding normal noise states">
+##INFO=<ID=RU,Number=1,Type=String,Description="Smallest repeating sequence unit in inserted or deleted sequence">
+##INFO=<ID=RC,Number=1,Type=Integer,Description="Number of times RU repeats in the reference allele">
+##INFO=<ID=IC,Number=1,Type=Integer,Description="Number of times RU repeats in the indel allele">
+##INFO=<ID=IHP,Number=1,Type=Integer,Description="Largest reference interrupted homopolymer length intersecting with the indel">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SOMATIC,Number=0,Type=Flag,Description="Somatic mutation">
+##INFO=<ID=OVERLAP,Number=0,Type=Flag,Description="Somatic indel possibly overlaps a second indel.">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth for tier1">
+##FORMAT=<ID=DP2,Number=1,Type=Integer,Description="Read depth for tier2">
+##FORMAT=<ID=TAR,Number=2,Type=Integer,Description="Reads strongly supporting alternate allele for tiers 1,2">
+##FORMAT=<ID=TIR,Number=2,Type=Integer,Description="Reads strongly supporting indel allele for tiers 1,2">
+##FORMAT=<ID=TOR,Number=2,Type=Integer,Description="Other reads (weak support or insufficient indel breakpoint overlap) for tiers 1,2">
+##cmdline=/demeter/scratch/ahujaa01/ksinai-demeter/toolkit/strelka.1.0.14/usr/libexec/filterSomaticVariants.pl --config=/demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-6229-normal=81e1b193774c4cbfa9246ee99e8f8bcf.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=ae5b848084184c3b9b7b006f5204c93f.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/config/run.config.ini --chrom=22
+##maxDepth_22=13.4003448389999
+##FORMAT=<ID=DP50,Number=1,Type=Float,Description="Average tier1 read depth within 50 bases">
+##FORMAT=<ID=FDP50,Number=1,Type=Float,Description="Average tier1 number of basecalls filtered from original read depth within 50 bases">
+##FORMAT=<ID=SUBDP50,Number=1,Type=Float,Description="Average number of reads below tier1 mapping quality threshold aligned across sites within 50 bases">
+##FILTER=<ID=DP,Description="Greater than 3.0x chromosomal mean depth in Normal sample">
+##FILTER=<ID=Repeat,Description="Sequence repeat of more than 8x in the reference sequence">
+##FILTER=<ID=iHpol,Description="Indel overlaps an interrupted homopolymer longer than 14x in the reference sequence">
+##FILTER=<ID=BCNoise,Description="Average fraction of filtered basecalls within 50 bases of the indel exceeds 0.3">
+##FILTER=<ID=QSI_ref,Description="Normal sample is not homozygous ref or sindel Q-score < 30, ie calls with NT!=ref or QSI_NT < 30">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NORMAL	TUMOR
+22	16291999	.	TGC	T	.	QSI_ref	IC=0;IHP=2;NT=ref;QSI=6;QSI_NT=6;RC=1;RU=GC;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	8:8:8,8:0,0:0,0:7.85:0.00:0.00	25:25:17,17:7,7:1,1:19.96:0.00:0.00
+22	16956617	.	TTC	T	.	QSI_ref	IC=0;IHP=3;NT=ref;QSI=9;QSI_NT=9;RC=1;RU=TC;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	9:9:9,13:0,0:0,0:8.72:0.00:0.00	13:13:9,9:3,3:1,1:9.68:0.00:0.00
+22	17039501	.	GC	G	.	QSI_ref	IC=1;IHP=2;NT=ref;QSI=7;QSI_NT=7;RC=2;RU=C;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	8:8:8,15:0,0:0,0:7.74:0.89:0.00	17:17:11,18:4,7:4,2:16.56:4.85:0.00
+22	17039507	.	CA	C	.	BCNoise;QSI_ref	IC=1;IHP=2;NT=ref;QSI=7;QSI_NT=7;RC=2;RU=A;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	8:8:8,13:0,0:0,1:7.63:0.82:0.00	15:15:11,19:4,5:2,0:16.03:4.82:0.00
+22	17046372	.	ACCAGCCAAG	A	.	QSI_ref	IC=2;IHP=4;NT=ref;QSI=2;QSI_NT=2;RC=3;RU=CCAGCCAAG;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	8:8:5,10:0,0:4,0:8.02:1.98:0.00	11:11:4,10:4,4:3,0:9.1:2.62:0.00
+22	17046396	.	CA	C	.	QSI_ref	IC=1;IHP=2;NT=ref;QSI=5;QSI_NT=5;RC=2;RU=A;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	10:10:7,11:0,0:3,0:9.98:2.46:0.00	13:13:9,11:3,4:1,1:11.72:3.40:0.00
+22	17046405	.	C	CA	.	BCNoise;QSI_ref	IC=2;IHP=2;NT=ref;QSI=4;QSI_NT=4;RC=1;RU=A;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	10:10:7,11:0,0:3,0:10.51:2.75:0.00	13:13:7,11:3,5:3,0:12.16:3.84:0.00
+22	18112584	.	T	TACACAC	.	QSI_ref;Repeat	IC=18;IHP=2;NT=ref;QSI=4;QSI_NT=4;RC=15;RU=AC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	7:7:6,6:0,0:1,2:6.31:0.25:0.00	3:3:0,0:3,3:0,0:2.52:0.00:0.00
+22	18359928	.	TGGAGGTTAG	T	.	QSI_ref	IC=1;IHP=5;NT=ref;QSI=4;QSI_NT=4;RC=2;RU=GGAGGTTAG;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	9:9:7,8:0,0:2,1:8.5:1.30:0.00	9:9:4,4:3,3:3,5:7.92:1.66:0.00
+22	19897189	.	C	CA	.	QSI_ref	IC=1;IHP=3;NT=ref;QSI=1;QSI_NT=1;RC=0;RU=A;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	5:5:5,5:0,0:0,0:4.47:1.09:0.00	13:13:9,9:4,4:0,0:11.48:0.37:0.00
+22	20150052	.	T	TACC	.	QSI_ref	IC=3;IHP=2;NT=ref;QSI=1;QSI_NT=1;RC=2;RU=ACC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	5:5:2,3:0,0:5,5:10.01:3.00:0.00	19:19:10,15:5,5:5,4:21.65:4.42:0.00
+22	20151176	.	C	CCATCAT	.	BCNoise;QSI_ref;DP	IC=3;IHP=3;NT=ref;QSI=27;QSI_NT=27;RC=1;RU=CAT;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	43:43:31,53:0,0:16,6:38.05:14.17:0.00	120:120:92,135:5,5:26,11:95.51:29.08:0.00
+22	20151677	.	TACC	T	.	QSI_ref;DP	IC=1;IHP=4;NT=ref;QSI=18;QSI_NT=18;RC=2;RU=ACC;SGT=ref->het;SOMATIC;TQSI=2;TQSI_NT=2	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	19:19:15,17:0,0:3,2:17.01:2.48:0.00	30:30:23,31:4,4:5,6:28.53:4.64:0.00
+22	21538476	.	AATCGCCAGTGAGGACGCCGCCCACGGC	A	.	QSI_ref;DP	IC=0;IHP=2;NT=het;QSI=1;QSI_NT=1;RC=1;RU=ATCGCCAGTGAGGACGCCGCCCACGGC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	41:41:15,16:10,10:15,15:32.12:2.25:0.00	30:30:22,24:0,0:9,9:29.88:1.45:0.00
+22	21539594	.	CGTT	C	.	QSI_ref;DP	IC=0;IHP=3;NT=ref;QSI=28;QSI_NT=28;RC=1;RU=GTT;SGT=ref->het;SOMATIC;TQSI=2;TQSI_NT=2	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	27:27:28,28:0,0:0,0:27.32:0.00:0.00	21:21:16,18:4,4:0,0:20.28:0.00:0.00
+22	21579128	.	AACAC	A	.	QSI_ref;Repeat	IC=17;IHP=5;NT=ref;QSI=3;QSI_NT=3;RC=19;RU=AC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	9:9:4,4:0,0:5,5:6.2:0.00:0.00	8:8:0,0:5,5:3,5:5.86:0.00:0.00
+22	22667210	.	GGTGT	G	.	QSI_ref;Repeat	IC=16;IHP=3;NT=ref;QSI=1;QSI_NT=1;RC=18;RU=GT;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	5:5:5,5:0,0:0,0:4.82:0.00:0.00	10:10:4,7:3,3:5,5:9.9:0.01:0.00
+22	24892372	.	TAC	T	.	QSI_ref;Repeat	IC=10;IHP=2;NT=ref;QSI=1;QSI_NT=1;RC=11;RU=AC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	6:6:6,7:0,0:4,3:8.65:0.00:0.00	11:11:6,6:3,3:1,1:9.98:0.00:0.00
+22	25781784	.	TACATACAC	T	.	QSI_ref	IC=0;IHP=2;NT=ref;QSI=1;QSI_NT=1;RC=1;RU=ACATACAC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	1:1:1,1:0,0:2,2:2.19:0.00:0.00	6:6:0,0:6,7:2,3:6.6:0.00:0.00
+22	26120082	.	AACAC	A	.	QSI_ref;Repeat	IC=16;IHP=4;NT=ref;QSI=1;QSI_NT=1;RC=18;RU=AC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	6:6:6,6:0,0:0,0:5.4:0.15:0.00	12:12:2,2:3,3:7,9:8.55:0.00:0.00
+22	26744622	.	AAG	A	.	QSI_ref	IC=0;IHP=6;NT=ref;QSI=1;QSI_NT=1;RC=1;RU=AG;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	5:5:5,8:0,0:0,0:5.31:0.54:0.00	8:8:5,6:3,3:0,0:6.66:0.20:0.00
+22	27415477	.	CTT	C	.	QSI_ref	IC=1;IHP=6;NT=ref;QSI=2;QSI_NT=2;RC=3;RU=T;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	5:5:5,5:0,0:0,0:4.64:0.56:0.00	5:5:0,0:2,2:3,3:3.21:0.00:0.00
+22	28997765	.	G	GACAC	.	QSI_ref;Repeat	IC=21;IHP=2;NT=ref;QSI=1;QSI_NT=1;RC=19;RU=AC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	1:1:1,1:0,0:0,0:0.97:0.00:0.00	14:14:0,0:5,6:9,10:9.64:0.00:0.00
+22	30366924	.	C	CT	.	QSI_ref;Repeat	IC=11;IHP=12;NT=ref;QSI=1;QSI_NT=1;RC=10;RU=T;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	8:8:6,6:0,0:2,2:5.75:1.09:0.00	5:5:2,2:3,3:0,0:6.1:0.00:0.00
+22	30742327	.	TCTG	T	.	DP	IC=4;IHP=2;NT=ref;QSI=45;QSI_NT=45;RC=5;RU=CTG;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	78:78:77,78:0,0:2,2:78.84:0.19:0.00	62:62:51,52:7,7:6,6:60.92:0.09:0.00
+22	32725648	.	GGTGT	G	.	QSI_ref	IC=4;IHP=3;NT=ref;QSI=3;QSI_NT=3;RC=6;RU=GT;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	5:5:4,4:0,0:1,1:3.52:0.00:0.00	14:14:11,11:3,3:0,0:9.83:0.05:0.00
+22	32725671	.	GGTGT	G	.	QSI_ref	IC=4;IHP=3;NT=ref;QSI=1;QSI_NT=1;RC=6;RU=GT;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	3:3:3,3:0,0:0,0:3.31:0.00:0.00	14:14:11,11:3,3:0,0:10.28:0.32:0.00
+22	33331270	.	TTC	T	.	QSI_ref;Repeat	IC=11;IHP=4;NT=ref;QSI=1;QSI_NT=1;RC=12;RU=TC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	3:3:2,2:0,0:0,0:3.01:0.01:0.00	4:4:0,0:4,4:0,0:3.13:0.00:0.00
+22	33537155	.	ATC	A	.	QSI_ref;Repeat	IC=12;IHP=3;NT=ref;QSI=1;QSI_NT=1;RC=13;RU=TC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	6:6:4,4:0,0:1,1:5.92:0.00:0.00	5:5:1,1:4,4:0,0:5.59:0.00:0.00
+22	36152003	.	AAT	A	.	QSI_ref;Repeat	IC=8;IHP=4;NT=ref;QSI=1;QSI_NT=1;RC=9;RU=AT;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	6:6:6,6:0,0:0,0:5.81:0.00:0.00	6:6:2,2:4,4:0,0:7.03:0.00:0.00
+22	36958244	.	GGT	G	.	QSI_ref;Repeat	IC=9;IHP=3;NT=ref;QSI=13;QSI_NT=13;RC=10;RU=GT;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	12:12:12,12:0,0:0,0:11.4:0.42:0.00	10:10:5,5:3,3:4,4:9.6:0.26:0.00
+22	37002804	.	CGT	C	.	QSI_ref;Repeat	IC=10;IHP=2;NT=ref;QSI=4;QSI_NT=4;RC=11;RU=GT;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	5:5:5,5:0,0:0,0:4.91:0.00:0.00	5:5:0,0:4,4:1,1:4.6:0.00:0.00
+22	37289778	.	GT	G	.	QSI_ref	IC=1;IHP=3;NT=ref;QSI=11;QSI_NT=11;RC=2;RU=T;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	6:6:6,6:0,0:0,0:5.48:0.00:0.00	27:27:19,19:4,4:4,5:21.09:0.00:0.00
+22	38895510	.	G	GA	.	QSI_ref;DP	IC=9;IHP=8;NT=ref;QSI=2;QSI_NT=2;RC=8;RU=A;SGT=ref->ref;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	26:26:24,24:0,0:2,2:26.29:0.00:0.00	20:20:11,11:3,3:6,6:19.05:0.33:0.00
+22	39157890	.	T	TGTGTGTGGGGA	.	QSI_ref	IC=2;IHP=2;NT=ref;QSI=1;QSI_NT=1;RC=1;RU=GTGTGTGGGGA;SGT=het->het;SOMATIC;TQSI=2;TQSI_NT=2	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	6:6:5,5:0,0:1,1:5.55:0.47:0.00	10:10:2,2:5,5:3,5:9.49:0.00:0.00
+22	39157998	.	ATG	A	.	QSI_ref	IC=3;IHP=2;NT=ref;QSI=1;QSI_NT=1;RC=4;RU=TG;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	6:6:6,6:0,0:0,0:4.62:0.11:0.00	8:8:4,4:3,3:4,4:9.07:0.00:0.00
+22	40403493	.	T	TC	.	QSI_ref;DP	IC=2;IHP=3;NT=ref;QSI=5;QSI_NT=5;RC=1;RU=C;SGT=ref->het;SOMATIC;TQSI=2;TQSI_NT=2	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	20:20:15,37:0,1:5,4:18.13:5.41:0.00	21:21:11,22:3,3:7,13:20.73:5.80:0.00
+22	42719866	.	A	ATGG	.	QSI_ref;DP	IC=8;IHP=3;NT=ref;QSI=22;QSI_NT=22;RC=7;RU=TGG;SGT=ref->het;SOMATIC;TQSI=2;TQSI_NT=2	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	28:28:22,26:0,0:7,9:24.6:2.24:0.00	24:24:15,19:6,6:3,5:23.05:1.03:0.00
+22	43227795	.	C	CT	.	QSI_ref;DP;Repeat	IC=11;IHP=13;NT=ref;QSI=5;QSI_NT=5;RC=10;RU=T;SGT=ref->ref;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	22:22:12,12:0,0:9,10:24.35:0.30:0.00	14:14:7,7:4,4:3,3:16.82:0.03:0.00
+22	43892044	.	AGGT	A	.	QSI_ref;DP	IC=1;IHP=4;NT=ref;QSI=18;QSI_NT=18;RC=2;RU=GGT;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	17:17:16,21:0,0:1,1:16.96:1.39:0.00	29:29:26,33:3,3:1,2:27.3:1.06:0.00
+22	43892459	.	G	GGAGGTA	.	QSI_ref	IC=1;IHP=4;NT=ref;QSI=4;QSI_NT=4;RC=0;RU=GAGGTA;SGT=het->het;SOMATIC;TQSI=2;TQSI_NT=2	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	12:12:12,12:0,0:0,1:10.3:0.90:0.00	12:12:7,7:4,5:1,1:13.2:1.46:0.00
+22	43892603	.	G	GAAA	.	BCNoise;QSI_ref	IC=3;IHP=4;NT=ref;QSI=1;QSI_NT=1;RC=0;RU=A;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	10:10:5,17:0,0:5,0:11.72:5.89:0.00	16:16:7,20:5,5:4,0:16.68:8.07:0.00
+22	43895495	.	TG	T	.	QSI_ref	IC=1;IHP=4;NT=ref;QSI=7;QSI_NT=7;RC=2;RU=G;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	11:11:10,12:0,0:0,0:7.93:0.64:0.00	14:14:6,10:4,4:4,7:16.83:2.94:0.00
+22	43896202	.	ATGGTGGTGG	A	.	DP	IC=1;IHP=4;NT=ref;QSI=37;QSI_NT=37;RC=4;RU=TGG;SGT=ref->het;SOMATIC;TQSI=2;TQSI_NT=2	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	32:32:34,35:0,0:3,3:29.39:3.13:0.00	41:41:30,33:8,8:3,4:31.55:1.93:0.00
+22	44579260	.	GC	G	.	QSI_ref;DP	IC=4;IHP=5;NT=ref;QSI=14;QSI_NT=14;RC=5;RU=C;SGT=ref->het;SOMATIC;TQSI=2;TQSI_NT=2	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	74:74:75,76:0,0:0,0:65.92:0.00:0.00	23:23:20,21:3,3:0,0:23.64:0.00:0.00
+22	45476187	.	TCATCAC	T	.	QSI_ref	IC=1;IHP=3;NT=ref;QSI=6;QSI_NT=6;RC=2;RU=CATCAC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	10:10:10,14:0,0:1,0:9.98:1.34:0.00	15:15:4,11:6,6:6,3:12.66:2.01:0.00
+22	45486860	.	CCACACACACA	C	.	QSI_ref;Repeat	IC=9;IHP=3;NT=ref;QSI=1;QSI_NT=1;RC=14;RU=CA;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	6:6:4,4:0,0:2,2:5.74:0.00:0.00	16:16:11,11:3,3:4,4:12.77:0.09:0.00
+22	47824497	.	CGA	C	.	QSI_ref;Repeat	IC=9;IHP=3;NT=ref;QSI=1;QSI_NT=1;RC=10;RU=GA;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	2:2:2,2:0,0:0,0:2.51:0.00:0.00	9:9:0,0:6,7:3,2:8.15:0.00:0.00
+22	48075350	.	ACATCCATCCATC	A	.	QSI_ref;Repeat	IC=6;IHP=2;NT=ref;QSI=1;QSI_NT=1;RC=9;RU=CATC;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	4:4:4,4:0,0:0,0:2.91:0.38:0.00	8:8:2,2:6,6:0,0:6.68:0.00:0.00
+22	49153182	.	GAGGGAGGAGA	G	.	DP	IC=0;IHP=5;NT=ref;QSI=36;QSI_NT=36;RC=1;RU=AGGGAGGAGA;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	37:37:30,38:0,0:3,4:33.46:4.94:0.00	35:35:21,23:7,7:7,7:30.19:1.44:0.00
+22	49353048	.	AG	A	.	QSI_ref	IC=0;IHP=7;NT=ref;QSI=1;QSI_NT=1;RC=1;RU=G;SGT=het->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	5:5:5,5:0,0:0,0:4.52:0.00:0.00	12:12:8,8:4,4:0,0:8.81:0.00:0.00
+22	50691932	.	C	CA	.	QSI_ref;DP	IC=2;IHP=3;NT=ref;QSI=6;QSI_NT=6;RC=1;RU=A;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1	DP:DP2:TAR:TIR:TOR:DP50:FDP50:SUBDP50	37:37:24,28:0,0:14,14:37.83:0.24:0.00	17:17:11,16:3,3:4,6:17.02:0.00:0.00

@@ -1,0 +1,11 @@
+WARNING: failed to find expected alignment for indel: INDEL pos: 79092929 type: DELETE len: 33 swap_dlen: 0
+	while evaluating read_segment:
+key: K00193:49:H77JWBBXX:4:1214:24464:35901/1
+id: 511998
+seq:  GGGTCAGGTGAGGGTCAGGTGAGGGCCAGGCGGGGTCCAGGCTAGGTCTGGGGCCGGGAAGGAGCGGGGCCGGGAAGGAGCGGGGCCGGGAAGGAGCGGGGCCGGGAAGGAGCGGAGCGGAGCGGAGCCGGGGCTGGCCCGGCCCAGGACC
+qual: ???;>>@>;?<@??<@>A?<@=A??A?>A?A????<@?>A?A?;B@=>@A=@@B>=@@>>B@>B@@@?@B6@@@>>@@<BB@@?@B>@@@<=B@>BB@@@@B@@@@;>B?0@;@@>BB@@>BB@@;BB@@@@@B01>(<<@@+<)-8:67<
+GENOME ALIGNMENT pos: 79092980 strand: F path: 49M32I70M
+is_realigned? 1
+REALIGN ALIGNMENT pos: 79092947 strand: F path: 20M33D29M32I70M
+buffer_pos: 79092980
+

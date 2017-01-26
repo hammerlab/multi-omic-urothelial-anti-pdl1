@@ -1,0 +1,45 @@
+# ** strelka variant-window file **
+#$ CMDLINE /demeter/scratch/ahujaa01/ksinai-demeter/toolkit/strelka.1.0.14/usr/libexec/strelka2 -clobber -filter-unanchored -min-paired-align-score 40 -min-single-align-score 10 -min-qscore 0 -report-range-begin 1 -report-range-end 25000000 -samtools-reference /demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta -max-window-mismatch 3 20 -print-used-allele-counts -bam-seq-name 7 -genome-size 2900338458 -max-indel-size 50 -indel-nonsite-match-prob 0.5 --min-contig-open-end-support 35 --somatic-snv-rate 0.000001 --shared-site-error-rate 0.0000005 --shared-site-error-strand-bias-fraction 0.5 --somatic-indel-rate 0.000001 --shared-indel-error-rate 0.0000001 --tier2-min-single-align-score 5 --tier2-min-paired-align-score 5 --tier2-single-align-score-rescue-mode --tier2-mismatch-density-filter-count 10 --tier2-no-filter-unanchored --tier2-indel-nonsite-match-prob 0.25 --tier2-include-singleton --tier2-include-anomalous -bam-file /demeter/scratch/ahujaa01/ksinai-demeter/ac137187664f496ca6270eed8e78629d.bam-indelrealigned-default-default-bqsr-default-default.bam --tumor-bam-file /demeter/scratch/ahujaa01/ksinai-demeter/acbba8d01a6d4930b6c12b44015625ee.bam-indelrealigned-default-default-bqsr-default-default.bam --somatic-snv-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-3529-normal=ac137187664f496ca6270eed8e78629d.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=acbba8d01a6d4930b6c12b44015625ee.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/7/bins/0000/somatic.snvs.unfiltered.vcf --somatic-indel-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-3529-normal=ac137187664f496ca6270eed8e78629d.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=acbba8d01a6d4930b6c12b44015625ee.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/7/bins/0000/somatic.indels.unfiltered.vcf --variant-window-flank-file 50 /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-3529-normal=ac137187664f496ca6270eed8e78629d.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=acbba8d01a6d4930b6c12b44015625ee.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/7/bins/0000/somatic.indels.unfiltered.vcf.window --max-input-depth 10000 --eland-compatibility --report-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-3529-normal=ac137187664f496ca6270eed8e78629d.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=acbba8d01a6d4930b6c12b44015625ee.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/7/bins/0000/strelka.stats
+#$ PROGRAM_VERSION 2.0.17.strelka1
+#$ START_TIME Sat Jun 11 05:40:01 2016
+#
+#$ FLANK_SIZE 50
+#
+#$ COLUMNS seq_name pos n1-win50_used n1-win50_filt n1-win50_submap t1-win50_used t1-win50_filt t1-win50_submap
+7	945789	8.90	0.72	0.00	11.86	0.34	0.00
+7	945831	11.46	0.32	0.00	15.69	0.40	0.00
+7	946018	18.41	3.04	0.00	17.57	5.86	0.00
+7	946068	26.48	3.47	0.00	22.70	5.12	0.00
+7	982248	69.18	5.84	0.00	120.11	9.42	0.00
+7	983020	8.48	0.75	0.00	17.05	2.88	0.00
+7	983192	6.36	1.36	0.00	11.27	2.47	0.00
+7	1055702	58.00	1.46	0.00	59.76	1.45	0.00
+7	1235561	6.06	0.00	0.00	8.61	0.00	0.00
+7	1335027	3.92	1.48	0.00	4.93	0.24	0.00
+7	1798299	26.61	2.14	0.00	14.89	1.95	0.00
+7	2477367	7.81	0.00	0.00	14.40	0.00	0.00
+7	3103265	10.75	0.00	0.00	22.50	0.00	0.00
+7	3271367	7.92	0.00	0.00	4.26	0.00	0.00
+7	3528536	5.08	0.00	0.00	7.11	0.00	0.00
+7	3726688	3.93	0.00	0.00	6.84	0.10	0.00
+7	4826100	61.33	0.06	0.00	28.11	0.00	0.00
+7	4944886	14.68	0.23	0.00	12.58	0.00	0.00
+7	5094877	6.16	0.12	0.00	8.89	0.00	0.00
+7	5336203	2.43	0.44	0.00	1.82	1.36	0.00
+7	5429092	45.35	0.83	0.00	27.15	0.59	0.00
+7	6485740	54.69	4.55	0.00	174.52	7.26	0.00
+7	6742670	10.13	0.00	0.00	15.52	0.00	0.00
+7	8695030	2.21	0.00	0.00	13.43	0.82	0.00
+7	9808655	6.48	0.58	0.00	7.11	0.51	0.00
+7	10005010	4.51	0.00	0.00	8.04	0.00	0.00
+7	11851731	6.96	0.00	0.00	11.51	0.00	0.00
+7	13236624	1.57	0.00	0.00	2.37	0.40	0.00
+7	13889330	1.79	0.00	0.00	2.62	0.29	0.00
+7	13960066	3.61	0.59	0.00	14.11	0.00	0.00
+7	15170678	4.21	0.00	0.00	6.80	0.01	0.00
+7	17744485	3.72	0.00	0.00	11.00	0.03	0.00
+7	19982724	5.03	0.00	0.00	8.61	0.00	0.00
+7	20180452	15.77	0.30	0.00	27.15	0.89	0.00
+7	20180466	18.84	0.21	0.00	33.23	0.89	0.00
+7	22234169	23.13	1.30	0.00	22.94	0.36	0.00
+7	24161888	6.95	0.00	0.00	10.98	0.00	0.00

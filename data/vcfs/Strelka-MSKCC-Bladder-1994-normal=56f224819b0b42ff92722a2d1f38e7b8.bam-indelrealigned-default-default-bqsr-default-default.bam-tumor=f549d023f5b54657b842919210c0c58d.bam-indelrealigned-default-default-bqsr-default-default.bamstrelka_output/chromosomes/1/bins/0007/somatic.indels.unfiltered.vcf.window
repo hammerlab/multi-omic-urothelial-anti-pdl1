@@ -1,0 +1,56 @@
+# ** strelka variant-window file **
+#$ CMDLINE /demeter/scratch/ahujaa01/ksinai-demeter/toolkit/strelka.1.0.14/usr/libexec/strelka2 -clobber -filter-unanchored -min-paired-align-score 40 -min-single-align-score 10 -min-qscore 0 -report-range-begin 175000001 -report-range-end 200000000 -samtools-reference /demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta -max-window-mismatch 3 20 -print-used-allele-counts -bam-seq-name 1 -genome-size 2900338458 -max-indel-size 50 -indel-nonsite-match-prob 0.5 --min-contig-open-end-support 35 --somatic-snv-rate 0.000001 --shared-site-error-rate 0.0000005 --shared-site-error-strand-bias-fraction 0.5 --somatic-indel-rate 0.000001 --shared-indel-error-rate 0.0000001 --tier2-min-single-align-score 5 --tier2-min-paired-align-score 5 --tier2-single-align-score-rescue-mode --tier2-mismatch-density-filter-count 10 --tier2-no-filter-unanchored --tier2-indel-nonsite-match-prob 0.25 --tier2-include-singleton --tier2-include-anomalous -bam-file /demeter/scratch/ahujaa01/ksinai-demeter/56f224819b0b42ff92722a2d1f38e7b8.bam-indelrealigned-default-default-bqsr-default-default.bam --tumor-bam-file /demeter/scratch/ahujaa01/ksinai-demeter/f549d023f5b54657b842919210c0c58d.bam-indelrealigned-default-default-bqsr-default-default.bam --somatic-snv-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-1994-normal=56f224819b0b42ff92722a2d1f38e7b8.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=f549d023f5b54657b842919210c0c58d.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/1/bins/0007/somatic.snvs.unfiltered.vcf --somatic-indel-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-1994-normal=56f224819b0b42ff92722a2d1f38e7b8.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=f549d023f5b54657b842919210c0c58d.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/1/bins/0007/somatic.indels.unfiltered.vcf --variant-window-flank-file 50 /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-1994-normal=56f224819b0b42ff92722a2d1f38e7b8.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=f549d023f5b54657b842919210c0c58d.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/1/bins/0007/somatic.indels.unfiltered.vcf.window --max-input-depth 10000 --eland-compatibility --report-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-1994-normal=56f224819b0b42ff92722a2d1f38e7b8.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=f549d023f5b54657b842919210c0c58d.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/1/bins/0007/strelka.stats
+#$ PROGRAM_VERSION 2.0.17.strelka1
+#$ START_TIME Sat Jun 11 07:19:17 2016
+#
+#$ FLANK_SIZE 50
+#
+#$ COLUMNS seq_name pos n1-win50_used n1-win50_filt n1-win50_submap t1-win50_used t1-win50_filt t1-win50_submap
+1	175189406	5.62	0.00	0.00	9.81	0.00	0.00
+1	175300163	3.25	0.00	0.00	3.24	0.00	0.00
+1	176670187	4.43	0.00	0.00	13.63	0.00	0.00
+1	176770241	4.13	0.00	0.00	7.33	0.00	0.00
+1	177217608	2.34	0.01	0.00	27.09	1.14	0.00
+1	177223514	6.40	0.00	0.00	19.22	0.01	0.00
+1	177333774	5.11	0.00	0.00	10.00	0.00	0.00
+1	177478632	5.06	0.00	0.00	4.53	0.00	0.00
+1	177539604	2.53	0.00	0.00	6.86	0.00	0.00
+1	178745812	6.84	0.01	0.00	37.79	1.15	0.00
+1	180030321	1.60	0.00	0.00	3.40	0.00	0.00
+1	180809702	2.19	0.70	0.00	25.85	2.21	0.00
+1	181450471	6.58	0.00	0.00	11.91	0.13	0.00
+1	182701404	10.61	0.24	0.00	24.23	0.00	0.00
+1	182757062	3.23	0.00	0.00	46.49	0.34	0.00
+1	183119013	4.15	0.14	0.00	16.12	1.16	0.00
+1	183332714	3.86	0.00	0.00	16.15	0.00	0.00
+1	184034317	1.42	0.65	0.00	30.83	0.01	0.00
+1	184866410	2.67	0.62	0.00	21.61	0.41	0.00
+1	184927496	3.58	0.18	0.00	34.84	0.05	0.00
+1	185269100	18.08	0.56	0.00	91.07	1.05	0.00
+1	185373681	4.88	0.00	0.00	25.07	0.00	0.00
+1	186002196	7.33	0.00	0.00	33.33	0.86	0.00
+1	186345125	3.81	0.00	0.00	38.50	0.00	0.00
+1	186571500	6.29	0.00	0.00	26.85	0.16	0.00
+1	186901738	5.30	0.00	0.00	21.34	0.00	0.00
+1	187236032	6.98	0.00	0.00	19.33	0.00	0.00
+1	187390964	2.00	0.00	0.00	15.14	0.00	0.00
+1	187400768	7.43	0.00	0.00	14.01	0.00	0.00
+1	188092243	11.16	0.46	0.00	13.36	0.00	0.00
+1	188252988	5.02	0.00	0.00	16.09	0.05	0.00
+1	188828596	2.91	0.00	0.00	20.20	0.23	0.00
+1	192233857	1.93	0.00	0.00	17.82	0.00	0.00
+1	192233867	1.83	0.00	0.00	18.36	0.01	0.00
+1	192610384	4.52	0.85	0.00	11.86	0.45	0.00
+1	192741064	4.90	0.00	0.00	11.70	0.00	0.00
+1	193054346	26.78	0.95	0.00	111.75	2.55	0.00
+1	193054575	27.46	0.78	0.00	85.39	3.39	0.00
+1	193111228	24.04	0.01	0.00	70.16	0.09	0.00
+1	193997585	8.92	0.00	0.00	22.99	1.86	0.00
+1	195045599	1.72	0.00	0.00	6.89	0.14	0.00
+1	195124194	2.28	0.00	0.00	12.18	0.01	0.00
+1	195684393	4.44	0.00	0.00	16.56	1.24	0.00
+1	196255747	4.11	0.00	0.00	17.90	0.00	0.00
+1	197470857	5.13	0.00	0.00	16.02	0.39	0.00
+1	198629607	2.16	0.00	0.00	21.25	0.51	0.00
+1	198864732	4.05	1.18	0.00	14.84	2.78	0.00
+1	199270790	6.25	0.00	0.00	11.95	0.22	0.00

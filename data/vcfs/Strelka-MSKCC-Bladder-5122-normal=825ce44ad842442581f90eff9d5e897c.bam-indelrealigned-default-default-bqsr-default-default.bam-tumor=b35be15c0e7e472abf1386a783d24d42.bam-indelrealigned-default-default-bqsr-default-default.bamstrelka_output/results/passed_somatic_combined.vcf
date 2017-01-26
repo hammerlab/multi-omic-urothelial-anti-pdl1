@@ -1,0 +1,263 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=BCNoise,Description="Fraction of basecalls filtered at this site in either sample is at or above 0.4">
+##FILTER=<ID=DP,Description="Greater than 3.0x chromosomal mean depth in Normal sample">
+##FILTER=<ID=QSI_ref,Description="Normal sample is not homozygous ref or sindel Q-score < 30, ie calls with NT!=ref or QSI_NT < 30">
+##FILTER=<ID=QSS_ref,Description="Normal sample is not homozygous ref or ssnv Q-score < 15, ie calls with NT!=ref or QSS_NT < 15">
+##FILTER=<ID=Repeat,Description="Sequence repeat of more than 8x in the reference sequence">
+##FILTER=<ID=SpanDel,Description="Fraction of reads crossing site with spanning deletions in either sample exceeeds 0.75">
+##FILTER=<ID=iHpol,Description="Indel overlaps an interrupted homopolymer longer than 14x in the reference sequence">
+##FORMAT=<ID=AU,Number=2,Type=Integer,Description="Number of 'A' alleles used in tiers 1,2">
+##FORMAT=<ID=CU,Number=2,Type=Integer,Description="Number of 'C' alleles used in tiers 1,2">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth for tier1 (used+filtered)">
+##FORMAT=<ID=DP2,Number=1,Type=Integer,Description="Read depth for tier2">
+##FORMAT=<ID=DP50,Number=1,Type=Float,Description="Average tier1 read depth within 50 bases">
+##FORMAT=<ID=FDP,Number=1,Type=Integer,Description="Number of basecalls filtered from original read depth for tier1">
+##FORMAT=<ID=FDP50,Number=1,Type=Float,Description="Average tier1 number of basecalls filtered from original read depth within 50 bases">
+##FORMAT=<ID=GU,Number=2,Type=Integer,Description="Number of 'G' alleles used in tiers 1,2">
+##FORMAT=<ID=SDP,Number=1,Type=Integer,Description="Number of reads with deletions spanning this site at tier1">
+##FORMAT=<ID=SUBDP,Number=1,Type=Integer,Description="Number of reads below tier1 mapping quality threshold aligned across this site">
+##FORMAT=<ID=SUBDP50,Number=1,Type=Float,Description="Average number of reads below tier1 mapping quality threshold aligned across sites within 50 bases">
+##FORMAT=<ID=TAR,Number=2,Type=Integer,Description="Reads strongly supporting alternate allele for tiers 1,2">
+##FORMAT=<ID=TIR,Number=2,Type=Integer,Description="Reads strongly supporting indel allele for tiers 1,2">
+##FORMAT=<ID=TOR,Number=2,Type=Integer,Description="Other reads (weak support or insufficient indel breakpoint overlap) for tiers 1,2">
+##FORMAT=<ID=TU,Number=2,Type=Integer,Description="Number of 'T' alleles used in tiers 1,2">
+##GATKCommandLine.CombineVariants=<ID=CombineVariants,Version=3.5-0-g36282e4,Date="Sat Jun 11 06:16:00 EDT 2016",Epoch=1465640160214,CommandLineOptions="analysis_type=CombineVariants input_file=[] showFullBamList=false read_buffer_size=null phone_home=AWS gatk_key=null tag=NA read_filter=[] disable_read_filter=[] intervals=null excludeIntervals=null interval_set_rule=UNION interval_merging=ALL interval_padding=0 reference_sequence=/demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta nonDeterministicRandomSeed=false disableDithering=false maxRuntime=-1 maxRuntimeUnits=MINUTES downsampling_type=BY_SAMPLE downsample_to_fraction=null downsample_to_coverage=1000 baq=OFF baqGapOpenPenalty=40.0 refactor_NDN_cigar_string=false fix_misencoded_quality_scores=false allow_potentially_misencoded_quality_scores=false useOriginalQualities=false defaultBaseQualities=-1 performanceLog=null BQSR=null quantize_quals=0 static_quantized_quals=null round_down_quantized=false disable_indel_quals=false emit_original_quals=false preserve_qscores_less_than=6 globalQScorePrior=-1.0 validation_strictness=SILENT remove_program_records=false keep_program_records=false sample_rename_mapping_file=null unsafe=null disable_auto_index_creation_and_locking_when_reading_rods=false no_cmdline_in_header=false sites_only=false never_trim_vcf_format_field=false bcf=false bam_compression=null simplifyBAM=false disable_bam_indexing=false generate_md5=false num_threads=1 num_cpu_threads_per_data_thread=1 num_io_threads=0 monitorThreadEfficiency=false num_bam_file_handles=null read_group_black_list=null pedigree=[] pedigreeString=[] pedigreeValidationType=STRICT allow_intervals_with_unindexed_bam=false generateShadowBCF=false variant_index_type=DYNAMIC_SEEK variant_index_parameter=-1 reference_window_stop=0 logging_level=INFO log_to_file=null help=false version=false variant=[(RodBindingCollection [(RodBinding name=snvs source=results/passed.somatic.snvs.vcf)]), (RodBindingCollection [(RodBinding name=indels source=results/passed.somatic.indels.vcf)])] out=/demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-5122-normal=825ce44ad842442581f90eff9d5e897c.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=b35be15c0e7e472abf1386a783d24d42.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/results/passed_somatic_combined.vcf genotypemergeoption=PRIORITIZE filteredrecordsmergetype=KEEP_IF_ANY_UNFILTERED multipleallelesmergetype=BY_TYPE rod_priority_list=snvs,indels printComplexMerges=false filteredAreUncalled=false minimalVCF=false excludeNonVariants=false setKey=set assumeIdenticalSamples=false minimumN=1 suppressCommandLineHeader=false mergeInfoWithMaxAC=false filter_reads_with_N_cigar=false filter_mismatching_base_and_quals=false filter_bases_not_stored=false">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=IC,Number=1,Type=Integer,Description="Number of times RU repeats in the indel allele">
+##INFO=<ID=IHP,Number=1,Type=Integer,Description="Largest reference interrupted homopolymer length intersecting with the indel">
+##INFO=<ID=NT,Number=1,Type=String,Description="Genotype of the normal in all data tiers, as used to classify somatic variants. One of {ref,het,hom,conflict}.">
+##INFO=<ID=OVERLAP,Number=0,Type=Flag,Description="Somatic indel possibly overlaps a second indel.">
+##INFO=<ID=QSI,Number=1,Type=Integer,Description="Quality score for any somatic variant, ie. for the ALT haplotype to be present at a significantly different frequency in the tumor and normal">
+##INFO=<ID=QSI_NT,Number=1,Type=Integer,Description="Quality score reflecting the joint probability of a somatic variant and NT">
+##INFO=<ID=QSS,Number=1,Type=Integer,Description="Quality score for any somatic snv, ie. for the ALT allele to be present at a significantly different frequency in the tumor and normal">
+##INFO=<ID=QSS_NT,Number=1,Type=Integer,Description="Quality score reflecting the joint probability of a somatic variant and NT">
+##INFO=<ID=RC,Number=1,Type=Integer,Description="Number of times RU repeats in the reference allele">
+##INFO=<ID=RU,Number=1,Type=String,Description="Smallest repeating sequence unit in inserted or deleted sequence">
+##INFO=<ID=SGT,Number=1,Type=String,Description="Most likely somatic genotype excluding normal noise states">
+##INFO=<ID=SOMATIC,Number=0,Type=Flag,Description="Somatic mutation">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=TQSI,Number=1,Type=Integer,Description="Data tier used to compute QSI">
+##INFO=<ID=TQSI_NT,Number=1,Type=Integer,Description="Data tier used to compute QSI_NT">
+##INFO=<ID=TQSS,Number=1,Type=Integer,Description="Data tier used to compute QSS">
+##INFO=<ID=TQSS_NT,Number=1,Type=Integer,Description="Data tier used to compute QSS_NT">
+##INFO=<ID=set,Number=1,Type=String,Description="Source VCF for the merged record in CombineVariants">
+##cmdline=/demeter/scratch/ahujaa01/ksinai-demeter/toolkit/strelka.1.0.14/usr/libexec/consolidateResults.pl --config=/demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-5122-normal=825ce44ad842442581f90eff9d5e897c.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=b35be15c0e7e472abf1386a783d24d42.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/config/run.config.ini
+##content=strelka somatic snv calls
+##contig=<ID=1,length=249250621,assembly=b37>
+##contig=<ID=2,length=243199373,assembly=b37>
+##contig=<ID=3,length=198022430,assembly=b37>
+##contig=<ID=4,length=191154276,assembly=b37>
+##contig=<ID=5,length=180915260,assembly=b37>
+##contig=<ID=6,length=171115067,assembly=b37>
+##contig=<ID=7,length=159138663,assembly=b37>
+##contig=<ID=8,length=146364022,assembly=b37>
+##contig=<ID=9,length=141213431,assembly=b37>
+##contig=<ID=10,length=135534747,assembly=b37>
+##contig=<ID=11,length=135006516,assembly=b37>
+##contig=<ID=12,length=133851895,assembly=b37>
+##contig=<ID=13,length=115169878,assembly=b37>
+##contig=<ID=14,length=107349540,assembly=b37>
+##contig=<ID=15,length=102531392,assembly=b37>
+##contig=<ID=16,length=90354753,assembly=b37>
+##contig=<ID=17,length=81195210,assembly=b37>
+##contig=<ID=18,length=78077248,assembly=b37>
+##contig=<ID=19,length=59128983,assembly=b37>
+##contig=<ID=20,length=63025520,assembly=b37>
+##contig=<ID=21,length=48129895,assembly=b37>
+##contig=<ID=22,length=51304566,assembly=b37>
+##contig=<ID=X,length=155270560,assembly=b37>
+##contig=<ID=Y,length=59373566,assembly=b37>
+##contig=<ID=MT,length=16569,assembly=b37>
+##contig=<ID=GL000207.1,length=4262,assembly=b37>
+##contig=<ID=GL000226.1,length=15008,assembly=b37>
+##contig=<ID=GL000229.1,length=19913,assembly=b37>
+##contig=<ID=GL000231.1,length=27386,assembly=b37>
+##contig=<ID=GL000210.1,length=27682,assembly=b37>
+##contig=<ID=GL000239.1,length=33824,assembly=b37>
+##contig=<ID=GL000235.1,length=34474,assembly=b37>
+##contig=<ID=GL000201.1,length=36148,assembly=b37>
+##contig=<ID=GL000247.1,length=36422,assembly=b37>
+##contig=<ID=GL000245.1,length=36651,assembly=b37>
+##contig=<ID=GL000197.1,length=37175,assembly=b37>
+##contig=<ID=GL000203.1,length=37498,assembly=b37>
+##contig=<ID=GL000246.1,length=38154,assembly=b37>
+##contig=<ID=GL000249.1,length=38502,assembly=b37>
+##contig=<ID=GL000196.1,length=38914,assembly=b37>
+##contig=<ID=GL000248.1,length=39786,assembly=b37>
+##contig=<ID=GL000244.1,length=39929,assembly=b37>
+##contig=<ID=GL000238.1,length=39939,assembly=b37>
+##contig=<ID=GL000202.1,length=40103,assembly=b37>
+##contig=<ID=GL000234.1,length=40531,assembly=b37>
+##contig=<ID=GL000232.1,length=40652,assembly=b37>
+##contig=<ID=GL000206.1,length=41001,assembly=b37>
+##contig=<ID=GL000240.1,length=41933,assembly=b37>
+##contig=<ID=GL000236.1,length=41934,assembly=b37>
+##contig=<ID=GL000241.1,length=42152,assembly=b37>
+##contig=<ID=GL000243.1,length=43341,assembly=b37>
+##contig=<ID=GL000242.1,length=43523,assembly=b37>
+##contig=<ID=GL000230.1,length=43691,assembly=b37>
+##contig=<ID=GL000237.1,length=45867,assembly=b37>
+##contig=<ID=GL000233.1,length=45941,assembly=b37>
+##contig=<ID=GL000204.1,length=81310,assembly=b37>
+##contig=<ID=GL000198.1,length=90085,assembly=b37>
+##contig=<ID=GL000208.1,length=92689,assembly=b37>
+##contig=<ID=GL000191.1,length=106433,assembly=b37>
+##contig=<ID=GL000227.1,length=128374,assembly=b37>
+##contig=<ID=GL000228.1,length=129120,assembly=b37>
+##contig=<ID=GL000214.1,length=137718,assembly=b37>
+##contig=<ID=GL000221.1,length=155397,assembly=b37>
+##contig=<ID=GL000209.1,length=159169,assembly=b37>
+##contig=<ID=GL000218.1,length=161147,assembly=b37>
+##contig=<ID=GL000220.1,length=161802,assembly=b37>
+##contig=<ID=GL000213.1,length=164239,assembly=b37>
+##contig=<ID=GL000211.1,length=166566,assembly=b37>
+##contig=<ID=GL000199.1,length=169874,assembly=b37>
+##contig=<ID=GL000217.1,length=172149,assembly=b37>
+##contig=<ID=GL000216.1,length=172294,assembly=b37>
+##contig=<ID=GL000215.1,length=172545,assembly=b37>
+##contig=<ID=GL000205.1,length=174588,assembly=b37>
+##contig=<ID=GL000219.1,length=179198,assembly=b37>
+##contig=<ID=GL000224.1,length=179693,assembly=b37>
+##contig=<ID=GL000223.1,length=180455,assembly=b37>
+##contig=<ID=GL000195.1,length=182896,assembly=b37>
+##contig=<ID=GL000212.1,length=186858,assembly=b37>
+##contig=<ID=GL000222.1,length=186861,assembly=b37>
+##contig=<ID=GL000200.1,length=187035,assembly=b37>
+##contig=<ID=GL000193.1,length=189789,assembly=b37>
+##contig=<ID=GL000194.1,length=191469,assembly=b37>
+##contig=<ID=GL000225.1,length=211173,assembly=b37>
+##contig=<ID=GL000192.1,length=547496,assembly=b37>
+##contig=<ID=NC_007605,length=171823,assembly=b37>
+##contig=<ID=hs37d5,length=35477943,assembly=b37>
+##fileDate=20160611
+##germlineIndelTheta=0.0001
+##germlineSnvTheta=0.001
+##maxDepth_10=5.58223042717414
+##maxDepth_11=7.21760531778368
+##maxDepth_12=6.17291476954112
+##maxDepth_13=3.21263979435145
+##maxDepth_14=5.72269875910555
+##maxDepth_15=8.215027104674
+##maxDepth_16=12.1125770400777
+##maxDepth_17=13.209851326322
+##maxDepth_18=3.92597737588144
+##maxDepth_19=25.4948333317595
+##maxDepth_1=7.73042133082543
+##maxDepth_20=6.80819712188046
+##maxDepth_21=5.52033281907167
+##maxDepth_22=11.8803121519424
+##maxDepth_2=5.12774665760118
+##maxDepth_3=4.70704146136441
+##maxDepth_4=3.84708206485377
+##maxDepth_5=4.31896651041789
+##maxDepth_6=4.76038615140544
+##maxDepth_7=6.07713045040979
+##maxDepth_8=4.08019700085637
+##maxDepth_9=6.36356204943073
+##maxDepth_GL000191.1=5.17345184294345
+##maxDepth_GL000192.1=6.98073593231731
+##maxDepth_GL000193.1=2.32387019268767
+##maxDepth_GL000194.1=8.9402723156229
+##maxDepth_GL000195.1=3.41938588050039
+##maxDepth_GL000196.1=2.88451457059156
+##maxDepth_GL000197.1=7.49259608900877
+##maxDepth_GL000198.1=1.96344563467836
+##maxDepth_GL000199.1=19.1393974357465
+##maxDepth_GL000200.1=0.583446948432112
+##maxDepth_GL000201.1=16.3020637379661
+##maxDepth_GL000202.1=1.29656135451213
+##maxDepth_GL000203.1=0.597151848098565
+##maxDepth_GL000204.1=2.53684663633009
+##maxDepth_GL000205.1=4.92961715581827
+##maxDepth_GL000206.1=1.35479622448233
+##maxDepth_GL000207.1=5.00258094791178
+##maxDepth_GL000208.1=2.30855872865173
+##maxDepth_GL000209.1=15.77491220024
+##maxDepth_GL000210.1=1.27409179899935
+##maxDepth_GL000211.1=12.740751413854
+##maxDepth_GL000212.1=26.8053655717176
+##maxDepth_GL000213.1=5.5007702190101
+##maxDepth_GL000214.1=13.2687230427395
+##maxDepth_GL000215.1=3.08995914109363
+##maxDepth_GL000216.1=6.19515479355056
+##maxDepth_GL000217.1=2.23123573183696
+##maxDepth_GL000218.1=4.97590398828399
+##maxDepth_GL000219.1=3.38272190537841
+##maxDepth_GL000220.1=213.146790521749
+##maxDepth_GL000221.1=5.61005038707311
+##maxDepth_GL000222.1=13.7641562444812
+##maxDepth_GL000223.1=12.3765980438336
+##maxDepth_GL000224.1=13.9293739878571
+##maxDepth_GL000225.1=7.21634868093932
+##maxDepth_GL000226.1=182.412113539446
+##maxDepth_GL000227.1=2.22989078785424
+##maxDepth_GL000228.1=7.68494423791822
+##maxDepth_GL000229.1=19.3144679355195
+##maxDepth_GL000230.1=50.6187086585338
+##maxDepth_GL000231.1=8.86438326152048
+##maxDepth_GL000232.1=4.91621568434517
+##maxDepth_GL000233.1=0.961559391393309
+##maxDepth_GL000234.1=5.17870272137376
+##maxDepth_GL000235.1=2.73353831873296
+##maxDepth_GL000236.1=2.61482329374732
+##maxDepth_GL000237.1=12.8979004513049
+##maxDepth_GL000238.1=17.5203184856907
+##maxDepth_GL000239.1=5.28352649006623
+##maxDepth_GL000240.1=0.941716547826294
+##maxDepth_GL000241.1=10.8701603719871
+##maxDepth_GL000242.1=16.1733795923994
+##maxDepth_GL000243.1=2.01661244549041
+##maxDepth_GL000244.1=5.62403265796789
+##maxDepth_GL000245.1=1.79094704100843
+##maxDepth_GL000246.1=2.31074068249725
+##maxDepth_GL000247.1=1.95763549503048
+##maxDepth_GL000248.1=0.77167847986729
+##maxDepth_GL000249.1=1.82374941561477
+##maxDepth_MT=84.1155239014969
+##maxDepth_X=2.49346311489514
+##maxDepth_Y=4.21761864252254
+##priorSomaticIndelRate=1e-06
+##priorSomaticSnvRate=1e-06
+##reference=file:///demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta
+##source=strelka
+##source_version=2.0.17.strelka1
+##startTime=Sat Jun 11 05:52:53 2016
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NORMAL	TUMOR
+1	145630536	.	T	A	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=70;QSS_NT=18;SGT=TT->AT;SOMATIC;TQSS=2;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,0:7:0:0,0:0:0:7,7	65,65:0,0:67:0:0,0:0:0:2,3
+1	150538520	.	TTTTTG	T	.	PASS	AC=0;AF=0.00;AN=0;IC=5;IHP=10;NT=ref;QSI=39;QSI_NT=39;RC=6;RU=TTTTG;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	3:3:3.03:0.00:0.00:4,4:0,0:0,0	106:106:86.65:0.01:0.00:12,12:69,69:24,26
+6	123222272	.	TTCTTCTTCTTCTTCTTCC	T	.	PASS	AC=0;AF=0.00;AN=0;IC=0;IHP=4;NT=ref;QSI=33;QSI_NT=33;RC=1;RU=TCTTCTTCTTCTTCTTCC;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	3:3:3.63:0.00:0.00:4,4:0,0:0,0	40:40:29.69:0.10:0.00:4,4:33,33:5,6
+11	124099042	.	C	CAGGA	.	PASS	AC=0;AF=0.00;AN=0;IC=1;IHP=2;NT=ref;QSI=30;QSI_NT=30;RC=0;RU=AGGA;SGT=ref->hom;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	3:3:3.05:0.00:0.00:3,3:0,0:0,0	17:17:15.84:0.00:0.00:0,0:17,17:0,0
+13	22215086	.	G	GTGTGTA	.	PASS	AC=0;AF=0.00;AN=0;IC=1;IHP=2;NT=ref;QSI=35;QSI_NT=35;RC=0;RU=TGTGTA;SGT=ref->hom;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	3:3:2.58:0.00:0.00:2,2:0,0:1,1	30:30:25.51:0.15:0.00:0,0:21,22:7,8
+16	60988464	.	T	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=17;QSS_NT=15;SGT=TT->CC;SOMATIC;TQSS=2;TQSS_NT=2;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,0:7:0:0,0:1:0:7,7	0,0:14,16:14:0:0,0:0:0:0,2
+16	89631691	.	GTGGGCTGGGC	G	.	PASS	AC=0;AF=0.00;AN=0;IC=3;IHP=4;NT=ref;QSI=32;QSI_NT=32;RC=5;RU=TGGGC;SGT=ref->hom;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	12:12:11.67:0.78:0.00:13,13:0,0:0,0	8:8:7.3:0.00:0.00:0,0:7,7:1,1
+17	4812318	.	T	TACACACAG	.	PASS	AC=0;AF=0.00;AN=0;IC=2;IHP=2;NT=ref;QSI=39;QSI_NT=38;RC=1;RU=ACACACAG;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	3:3:4.06:0.36:0.00:3,3:0,0:0,0	65:65:50.37:0.84:0.00:2,2:41,42:22,22
+17	6560977	.	C	A	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=18;QSS_NT=16;SGT=CC->AA;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:8,9:9:1:0,0:0:0:0,0	11,11:0,0:11:0:0,0:0:0:0,0
+17	14233909	.	G	A	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=34;QSS_NT=18;SGT=GG->AA;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,0:7:0:7,7:0:0:0,0	18,18:0,0:18:0:0,0:0:0:0,0
+17	42720044	.	T	TGAA	.	PASS	AC=0;AF=0.00;AN=0;IC=1;IHP=2;NT=ref;QSI=31;QSI_NT=31;RC=0;RU=GAA;SGT=ref->hom;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	2:2:2.13:0.00:0.00:2,2:0,0:0,0	20:20:17.26:1.80:0.00:0,0:19,19:1,1
+17	53026823	.	TAAAAG	T	.	PASS	AC=0;AF=0.00;AN=0;IC=1;IHP=8;NT=ref;QSI=43;QSI_NT=43;RC=2;RU=AAAAG;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	12:12:14.29:0.00:0.00:13,13:0,0:1,1	22:22:23.02:0.01:0.00:2,2:18,18:2,2
+19	17321256	.	G	T	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=32;QSS_NT=32;SGT=GG->GT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,0:24:0:24,24:0:0:0,0	0,0:0,0:28:0:19,19:0:0:9,9
+19	39232331	.	G	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=27;QSS_NT=27;SGT=GG->CG;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,0:20:0:20,20:0:0:0,0	0,0:12,12:41:0:29,29:0:0:0,0
+19	51462650	.	T	A	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=15;QSS_NT=15;SGT=TT->AT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,0:19:0:0,0:0:0:19,19	4,4:0,0:21:0:0,0:0:0:17,17
+19	54650294	.	C	A	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=15;QSS_NT=15;SGT=CC->AC;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:17,17:17:0:0,0:0:0:0,0	4,4:3,3:7:0:0,0:0:0:0,0
+20	18015352	.	CA	C	.	PASS	AC=0;AF=0.00;AN=0;IC=5;IHP=8;NT=ref;QSI=34;QSI_NT=34;RC=6;RU=A;SGT=ref->hom;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	3:3:3.53:0.00:0.00:3,3:0,0:0,0	18:18:16.72:0.50:0.00:0,0:17,17:1,1
+20	37193526	.	TTCC	T	.	PASS	AC=0;AF=0.00;AN=0;IC=2;IHP=4;NT=ref;QSI=38;QSI_NT=37;RC=3;RU=TCC;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	3:3:5.5:0.00:0.00:3,3:0,0:0,0	55:55:48.9:1.38:0.00:4,4:50,50:2,3
+GL000226.1	121	.	A	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=26;QSS_NT=26;SGT=AA->AC;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	92,151:8,14:133:33:0,0:0:0:0,0	154,319:40,46:315:121:0,0:0:0:0,0
+GL000226.1	14300	.	T	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=55;QSS_NT=55;SGT=TT->CT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,0:119:2:0,0:0:0:117,124	0,0:16,18:121:5:0,0:0:0:100,109
+GL000226.1	14308	.	C	T	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=60;QSS_NT=60;SGT=CC->CT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:116,125:121:3:1,1:0:0:1,1	0,0:97,105:126:5:4,4:0:0:20,25
+GL000226.1	14347	.	T	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=71;QSS_NT=71;SGT=TT->CT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,2:162:3:1,2:0:0:158,166	0,0:18,37:184:13:0,0:0:0:153,161
+GL000226.1	14398	.	C	G	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=25;QSS_NT=25;SGT=CC->CG;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:166,175:171:5:0,2:0:0:0,0	0,0:119,124:164:37:8,45:0:0:0,0
+GL000220.1	118463	.	C	T	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=62;QSS_NT=62;SGT=CC->CT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:188,194:191:3:0,0:0:0:0,0	0,0:188,189:199:1:0,0:0:0:10,10
+GL000220.1	126796	.	CTCTCTG	C	.	PASS	AC=0;AF=0.00;AN=0;IC=2;IHP=4;NT=ref;QSI=66;QSI_NT=66;RC=3;RU=TCTCTG;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	151:151:139.68:0.53:0.00:132,135:0,0:24,25	326:326:305.79:7.90:0.00:268,284:8,8:61,68
+GL000220.1	127075	.	C	CTCTCTCTCTT	.	PASS	AC=0;AF=0.00;AN=0;IC=1;IHP=2;NT=ref;QSI=88;QSI_NT=88;RC=0;RU=TCTCTCTCTT;SGT=ref->het;SOMATIC;TQSI=1;TQSI_NT=1;set=indels	DP:DP2:DP50:FDP50:SUBDP50:TAR:TIR:TOR	171:171:165.08:6.72:0.00:157,164:0,0:16,16	391:391:355.3:18.46:0.00:289,310:17,17:88,95
+GL000220.1	128047	.	G	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=26;QSS_NT=26;SGT=GG->CG;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:2,2:165:2:161,169:0:0:0,1	0,0:12,19:308:6:290,315:4:0:0,0
+GL000220.1	128313	.	G	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=84;QSS_NT=84;SGT=GG->CG;SOMATIC;TQSS=2;TQSS_NT=2;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,1:187:2:183,190:0:0:2,2	0,0:15,17:353:5:333,361:3:0:0,0
+GL000220.1	131045	.	T	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=55;QSS_NT=55;SGT=TT->CT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:0,0:112:1:0,0:0:0:111,115	2,2:32,44:233:10:0,0:4:0:189,221
+GL000220.1	131418	.	T	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=67;QSS_NT=67;SGT=TT->CT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:1,1:167:1:0,0:0:0:165,171	0,0:13,15:340:20:0,0:2:0:307,343
+GL000220.1	131424	.	A	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=55;QSS_NT=55;SGT=AA->AC;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	171,176:1,1:175:2:0,0:0:0:1,1	296,314:13,15:329:18:1,16:4:0:1,1
+GL000220.1	131451	.	C	T	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=17;QSS_NT=17;SGT=CC->CT;SOMATIC;TQSS=2;TQSS_NT=2;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:162,170:165:2:0,0:0:0:1,2	1,1:322,344:337:4:0,0:5:0:10,12
+GL000220.1	132498	.	C	T	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=20;QSS_NT=20;SGT=CC->CT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:199,210:211:7:0,1:1:0:5,8	0,0:380,429:409:11:0,0:8:0:18,26
+GL000220.1	133214	.	G	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=18;QSS_NT=18;SGT=GG->CG;SOMATIC;TQSS=2;TQSS_NT=2;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	0,0:5,6:180:6:167,174:1:0:2,7	0,0:17,26:416:21:377,409:3:0:1,6
+GL000220.1	135967	.	A	T	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=34;QSS_NT=34;SGT=AA->AT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	195,201:2,3:202:2:0,0:0:0:3,5	403,435:3,4:436:12:1,1:0:0:17,28
+GL000220.1	136039	.	T	C	.	PASS	AC=0;AF=0.00;AN=0;NT=ref;QSS=91;QSS_NT=91;SGT=TT->CT;SOMATIC;TQSS=1;TQSS_NT=1;set=snvs	AU:CU:DP:FDP:GU:SDP:SUBDP:TU	1,1:0,0:197:2:0,0:0:0:194,202	0,0:18,19:351:1:0,0:0:0:332,350

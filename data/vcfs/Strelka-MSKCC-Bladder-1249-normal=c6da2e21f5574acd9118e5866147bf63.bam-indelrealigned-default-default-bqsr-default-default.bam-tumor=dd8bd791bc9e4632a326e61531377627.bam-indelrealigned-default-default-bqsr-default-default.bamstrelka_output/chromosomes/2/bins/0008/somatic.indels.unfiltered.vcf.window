@@ -1,0 +1,32 @@
+# ** strelka variant-window file **
+#$ CMDLINE /demeter/scratch/ahujaa01/ksinai-demeter/toolkit/strelka.1.0.14/usr/libexec/strelka2 -clobber -filter-unanchored -min-paired-align-score 40 -min-single-align-score 10 -min-qscore 0 -report-range-begin 200000001 -report-range-end 225000000 -samtools-reference /demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta -max-window-mismatch 3 20 -print-used-allele-counts -bam-seq-name 2 -genome-size 2900338458 -max-indel-size 50 -indel-nonsite-match-prob 0.5 --min-contig-open-end-support 35 --somatic-snv-rate 0.000001 --shared-site-error-rate 0.0000005 --shared-site-error-strand-bias-fraction 0.5 --somatic-indel-rate 0.000001 --shared-indel-error-rate 0.0000001 --tier2-min-single-align-score 5 --tier2-min-paired-align-score 5 --tier2-single-align-score-rescue-mode --tier2-mismatch-density-filter-count 10 --tier2-no-filter-unanchored --tier2-indel-nonsite-match-prob 0.25 --tier2-include-singleton --tier2-include-anomalous -bam-file /demeter/scratch/ahujaa01/ksinai-demeter/c6da2e21f5574acd9118e5866147bf63.bam-indelrealigned-default-default-bqsr-default-default.bam --tumor-bam-file /demeter/scratch/ahujaa01/ksinai-demeter/dd8bd791bc9e4632a326e61531377627.bam-indelrealigned-default-default-bqsr-default-default.bam --somatic-snv-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-1249-normal=c6da2e21f5574acd9118e5866147bf63.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=dd8bd791bc9e4632a326e61531377627.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/2/bins/0008/somatic.snvs.unfiltered.vcf --somatic-indel-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-1249-normal=c6da2e21f5574acd9118e5866147bf63.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=dd8bd791bc9e4632a326e61531377627.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/2/bins/0008/somatic.indels.unfiltered.vcf --variant-window-flank-file 50 /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-1249-normal=c6da2e21f5574acd9118e5866147bf63.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=dd8bd791bc9e4632a326e61531377627.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/2/bins/0008/somatic.indels.unfiltered.vcf.window --max-input-depth 10000 --eland-compatibility --report-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-1249-normal=c6da2e21f5574acd9118e5866147bf63.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=dd8bd791bc9e4632a326e61531377627.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/2/bins/0008/strelka.stats
+#$ PROGRAM_VERSION 2.0.17.strelka1
+#$ START_TIME Sat Jun 11 05:40:31 2016
+#
+#$ FLANK_SIZE 50
+#
+#$ COLUMNS seq_name pos n1-win50_used n1-win50_filt n1-win50_submap t1-win50_used t1-win50_filt t1-win50_submap
+2	200124964	6.79	0.50	0.00	5.87	0.00	0.00
+2	202516696	12.99	0.75	0.00	27.39	1.13	0.00
+2	206014976	4.97	0.58	0.00	10.77	0.40	0.00
+2	208233098	4.48	0.00	0.00	17.66	0.02	0.00
+2	209011237	5.07	0.00	0.00	12.10	0.42	0.00
+2	210841177	13.57	0.38	0.00	9.01	0.49	0.00
+2	211521242	27.32	2.33	0.00	43.38	4.39	0.00
+2	212606226	6.52	0.00	0.00	8.47	0.00	0.00
+2	213601620	4.69	0.00	0.00	18.04	0.00	0.00
+2	215970320	4.23	0.00	0.00	16.24	0.26	0.00
+2	216703314	6.17	0.07	0.00	14.54	0.00	0.00
+2	216973869	135.46	1.07	0.00	235.47	1.41	0.00
+2	217052189	3.97	0.00	0.00	14.40	0.36	0.00
+2	217939109	7.93	0.21	0.00	18.90	0.00	0.00
+2	218058007	2.16	0.00	0.00	23.64	0.26	0.00
+2	218108366	2.22	0.00	0.00	14.84	0.00	0.00
+2	218670200	7.97	4.33	0.00	15.48	4.38	0.00
+2	219717803	5.69	0.00	0.00	8.83	0.00	0.00
+2	219746262	7.93	0.13	0.00	11.97	0.38	0.00
+2	220089590	79.35	0.90	0.00	90.91	0.01	0.00
+2	220194531	50.05	0.00	0.00	32.49	0.01	0.00
+2	220223962	10.20	0.00	0.00	20.82	0.08	0.00
+2	220961030	5.67	0.00	0.00	9.14	0.00	0.00
+2	223974758	4.33	0.00	0.00	6.44	0.00	0.00

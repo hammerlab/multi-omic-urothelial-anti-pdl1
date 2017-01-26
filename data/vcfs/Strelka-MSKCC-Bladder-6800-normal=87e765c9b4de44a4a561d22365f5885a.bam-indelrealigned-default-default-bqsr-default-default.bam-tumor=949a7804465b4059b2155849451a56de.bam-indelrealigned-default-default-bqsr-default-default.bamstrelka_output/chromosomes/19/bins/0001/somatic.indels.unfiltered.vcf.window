@@ -1,0 +1,80 @@
+# ** strelka variant-window file **
+#$ CMDLINE /demeter/scratch/ahujaa01/ksinai-demeter/toolkit/strelka.1.0.14/usr/libexec/strelka2 -clobber -filter-unanchored -min-paired-align-score 40 -min-single-align-score 10 -min-qscore 0 -report-range-begin 25000001 -report-range-end 50000000 -samtools-reference /demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta -max-window-mismatch 3 20 -print-used-allele-counts -bam-seq-name 19 -genome-size 2900338458 -max-indel-size 50 -indel-nonsite-match-prob 0.5 --min-contig-open-end-support 35 --somatic-snv-rate 0.000001 --shared-site-error-rate 0.0000005 --shared-site-error-strand-bias-fraction 0.5 --somatic-indel-rate 0.000001 --shared-indel-error-rate 0.0000001 --tier2-min-single-align-score 5 --tier2-min-paired-align-score 5 --tier2-single-align-score-rescue-mode --tier2-mismatch-density-filter-count 10 --tier2-no-filter-unanchored --tier2-indel-nonsite-match-prob 0.25 --tier2-include-singleton --tier2-include-anomalous -bam-file /demeter/scratch/ahujaa01/ksinai-demeter/87e765c9b4de44a4a561d22365f5885a.bam-indelrealigned-default-default-bqsr-default-default.bam --tumor-bam-file /demeter/scratch/ahujaa01/ksinai-demeter/949a7804465b4059b2155849451a56de.bam-indelrealigned-default-default-bqsr-default-default.bam --somatic-snv-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-6800-normal=87e765c9b4de44a4a561d22365f5885a.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=949a7804465b4059b2155849451a56de.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/19/bins/0001/somatic.snvs.unfiltered.vcf --somatic-indel-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-6800-normal=87e765c9b4de44a4a561d22365f5885a.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=949a7804465b4059b2155849451a56de.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/19/bins/0001/somatic.indels.unfiltered.vcf --variant-window-flank-file 50 /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-6800-normal=87e765c9b4de44a4a561d22365f5885a.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=949a7804465b4059b2155849451a56de.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/19/bins/0001/somatic.indels.unfiltered.vcf.window --max-input-depth 10000 --eland-compatibility --report-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-6800-normal=87e765c9b4de44a4a561d22365f5885a.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=949a7804465b4059b2155849451a56de.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/19/bins/0001/strelka.stats
+#$ PROGRAM_VERSION 2.0.17.strelka1
+#$ START_TIME Sat Jun 11 07:39:33 2016
+#
+#$ FLANK_SIZE 50
+#
+#$ COLUMNS seq_name pos n1-win50_used n1-win50_filt n1-win50_submap t1-win50_used t1-win50_filt t1-win50_submap
+19	27885005	2.34	0.00	0.00	2.70	0.00	0.00
+19	27890223	1.39	0.28	0.00	8.72	9.20	0.00
+19	28915251	10.91	0.00	0.00	18.59	0.45	0.00
+19	29506742	4.54	0.00	0.00	2.93	0.07	0.00
+19	29506844	1.59	0.00	0.00	4.05	0.31	0.00
+19	29902033	4.48	0.32	0.00	9.57	0.00	0.00
+19	29911029	7.83	0.00	0.00	20.07	0.02	0.00
+19	30140764	4.73	0.00	0.00	23.13	0.17	0.00
+19	30239427	3.66	0.00	0.00	1.51	0.40	0.00
+19	32135042	6.85	0.00	0.00	14.49	0.00	0.00
+19	32206990	5.23	0.00	0.00	10.19	0.54	0.00
+19	32929849	12.36	0.00	0.00	30.23	1.35	0.00
+19	33289195	53.74	1.11	0.00	70.55	1.75	0.00
+19	33741153	7.27	0.25	0.00	15.44	2.96	0.00
+19	33741251	7.03	0.34	0.00	13.22	0.83	0.00
+19	33741270	5.66	0.26	0.00	11.45	0.83	0.00
+19	33741274	5.34	0.18	0.00	10.95	0.83	0.00
+19	34856038	184.51	3.29	0.00	129.73	5.33	0.00
+19	35521341	78.53	0.63	0.00	71.63	1.15	0.00
+19	35596955	4.32	0.87	0.00	3.08	1.52	0.00
+19	35629467	6.18	0.01	0.00	10.20	0.00	0.00
+19	35758789	54.83	2.86	0.00	66.14	2.73	0.00
+19	35759603	14.74	1.94	0.00	17.92	0.86	0.00
+19	36270198	11.56	0.38	0.00	14.37	0.80	0.00
+19	36369450	28.59	1.07	0.00	35.28	1.68	0.00
+19	36572251	41.71	0.77	0.00	35.57	0.75	0.00
+19	36764877	116.66	0.01	0.00	193.76	0.61	0.00
+19	36773105	20.78	0.00	0.00	66.45	1.66	0.00
+19	36795970	26.34	0.81	0.00	52.95	1.59	0.00
+19	37112493	2.92	0.00	0.00	28.63	0.29	0.00
+19	37322041	1.47	0.00	0.00	6.59	0.00	0.00
+19	37654640	3.61	0.00	0.00	21.37	0.06	0.00
+19	37804646	5.36	0.00	0.00	23.48	0.65	0.00
+19	38066944	4.22	0.00	0.00	16.35	0.01	0.00
+19	38086101	8.32	0.00	0.00	17.68	0.38	0.00
+19	38353158	10.51	2.01	0.00	12.83	1.29	0.00
+19	39725938	4.59	0.00	0.00	15.52	0.01	0.00
+19	40033610	5.66	0.00	0.00	15.93	0.21	0.00
+19	40905812	5.67	0.05	0.00	6.91	0.00	0.00
+19	40914723	5.06	0.00	0.00	10.73	0.33	0.00
+19	40925160	6.80	0.00	0.00	19.08	0.75	0.00
+19	41103222	167.02	1.10	0.00	167.39	0.99	0.00
+19	41188890	67.76	0.27	0.00	89.32	2.19	0.00
+19	41191207	3.03	0.00	0.00	13.51	0.00	0.00
+19	41758161	19.52	0.37	0.00	30.41	0.00	0.00
+19	42119854	8.51	0.00	0.00	17.00	0.00	0.00
+19	42153130	3.38	0.08	0.00	23.68	1.24	0.00
+19	42442659	4.70	0.41	0.00	11.75	1.25	0.00
+19	42876224	5.51	0.00	0.00	8.50	0.00	0.00
+19	42907393	10.70	0.08	0.00	16.56	0.95	0.00
+19	42942562	5.34	0.00	0.00	5.25	0.00	0.00
+19	43440061	24.22	0.65	0.00	20.14	0.27	0.00
+19	43702098	275.35	0.85	0.00	222.21	0.81	0.00
+19	43876979	33.56	1.27	0.00	19.10	2.75	0.00
+19	44084775	80.08	1.24	0.00	68.28	0.64	0.00
+19	45255335	8.12	0.45	0.00	20.67	0.22	0.00
+19	45323170	112.72	3.37	0.00	100.47	3.90	0.00
+19	45376893	7.07	0.00	0.00	10.99	0.00	0.00
+19	45844812	8.63	0.00	0.00	12.74	0.16	0.00
+19	46643195	3.71	0.00	0.00	4.83	0.00	0.00
+19	46892717	3.75	0.01	0.00	25.46	0.24	0.00
+19	47507173	6.72	0.00	0.00	13.91	0.41	0.00
+19	47551118	32.08	1.48	0.00	40.52	1.26	0.00
+19	47732904	6.39	0.00	0.00	14.06	0.96	0.00
+19	48455334	11.17	0.00	0.00	38.70	1.22	0.00
+19	48613788	79.50	0.11	0.00	116.23	0.34	0.00
+19	49068592	7.84	0.55	0.00	3.23	0.00	0.00
+19	49172387	10.94	1.12	0.00	23.87	4.36	0.00
+19	49172410	10.42	1.01	0.00	20.66	5.04	0.00
+19	49172630	73.70	31.41	0.00	182.08	63.04	0.00
+19	49172783	23.41	8.11	0.00	40.78	17.73	0.00
+19	49963986	10.90	0.59	0.00	16.25	1.48	0.00

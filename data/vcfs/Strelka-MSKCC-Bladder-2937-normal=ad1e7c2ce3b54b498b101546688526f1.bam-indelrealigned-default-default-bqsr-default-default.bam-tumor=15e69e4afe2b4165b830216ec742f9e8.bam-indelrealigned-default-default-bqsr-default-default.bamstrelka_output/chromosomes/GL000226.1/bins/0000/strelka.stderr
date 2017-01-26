@@ -1,0 +1,3 @@
+WARNING: re-alignment skipped some alternate alignments for read: K00193:49:H77JWBBXX:4:2125:13200:47893/1	reason: alignments crossed chromosome origin
+WARNING: re-alignment skipped some alternate alignments for read: K00193:49:H77JWBBXX:4:2128:9120:1332/2	reason: alignments crossed chromosome origin
+WARNING: re-alignment skipped some alternate alignments for read: K00193:49:H77JWBBXX:8:2128:14357:13359/1	reason: alignments crossed chromosome origin

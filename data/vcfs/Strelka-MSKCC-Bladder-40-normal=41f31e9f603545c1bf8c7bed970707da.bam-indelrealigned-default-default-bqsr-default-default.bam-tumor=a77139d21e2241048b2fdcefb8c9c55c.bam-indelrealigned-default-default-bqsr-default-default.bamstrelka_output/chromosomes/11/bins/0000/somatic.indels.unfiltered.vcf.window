@@ -1,0 +1,83 @@
+# ** strelka variant-window file **
+#$ CMDLINE /demeter/scratch/ahujaa01/ksinai-demeter/toolkit/strelka.1.0.14/usr/libexec/strelka2 -clobber -filter-unanchored -min-paired-align-score 40 -min-single-align-score 10 -min-qscore 0 -report-range-begin 1 -report-range-end 25000000 -samtools-reference /demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta -max-window-mismatch 3 20 -print-used-allele-counts -bam-seq-name 11 -genome-size 2900338458 -max-indel-size 50 -indel-nonsite-match-prob 0.5 --min-contig-open-end-support 35 --somatic-snv-rate 0.000001 --shared-site-error-rate 0.0000005 --shared-site-error-strand-bias-fraction 0.5 --somatic-indel-rate 0.000001 --shared-indel-error-rate 0.0000001 --tier2-min-single-align-score 5 --tier2-min-paired-align-score 5 --tier2-single-align-score-rescue-mode --tier2-mismatch-density-filter-count 10 --tier2-no-filter-unanchored --tier2-indel-nonsite-match-prob 0.25 --tier2-include-singleton --tier2-include-anomalous -bam-file /demeter/scratch/ahujaa01/ksinai-demeter/41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam --tumor-bam-file /demeter/scratch/ahujaa01/ksinai-demeter/a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bam --somatic-snv-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-40-normal=41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/11/bins/0000/somatic.snvs.unfiltered.vcf --somatic-indel-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-40-normal=41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/11/bins/0000/somatic.indels.unfiltered.vcf --variant-window-flank-file 50 /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-40-normal=41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/11/bins/0000/somatic.indels.unfiltered.vcf.window --max-input-depth 10000 --eland-compatibility --report-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-40-normal=41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/11/bins/0000/strelka.stats
+#$ PROGRAM_VERSION 2.0.17.strelka1
+#$ START_TIME Sat Jun 11 08:34:33 2016
+#
+#$ FLANK_SIZE 50
+#
+#$ COLUMNS seq_name pos n1-win50_used n1-win50_filt n1-win50_submap t1-win50_used t1-win50_filt t1-win50_submap
+11	121213	28.54	0.02	0.00	56.95	0.00	0.00
+11	154257	7.88	0.16	0.00	23.17	0.00	0.00
+11	262191	5.12	0.00	0.00	4.10	0.00	0.00
+11	293001	102.02	1.98	0.00	116.03	0.09	0.00
+11	357232	0.47	0.52	0.00	3.90	0.00	0.00
+11	694961	114.54	0.01	0.00	146.15	0.03	0.00
+11	1212885	21.64	3.11	0.00	22.27	3.84	0.00
+11	1494033	4.68	0.00	0.00	1.99	0.00	0.00
+11	1651613	284.77	4.04	0.00	374.18	4.92	0.00
+11	1961158	60.48	10.00	0.00	61.55	14.54	0.00
+11	2008512	6.46	0.21	0.00	2.94	0.00	0.00
+11	2820605	6.95	0.00	0.00	17.07	0.00	0.00
+11	2905204	181.28	1.13	0.00	427.31	0.32	0.00
+11	2920953	41.12	1.00	0.00	130.39	3.85	0.00
+11	3220542	7.43	0.01	0.00	15.09	0.14	0.00
+11	3756581	11.51	0.38	0.00	26.47	1.94	0.00
+11	4070945	5.18	0.00	0.00	14.25	0.11	0.00
+11	4230275	3.08	0.00	0.00	5.97	0.00	0.00
+11	5108981	3.76	1.10	0.00	5.98	0.00	0.00
+11	5128962	25.76	0.99	0.00	60.62	1.36	0.00
+11	5172795	92.01	1.33	0.00	113.65	0.42	0.00
+11	5809806	89.75	0.19	0.00	153.33	0.40	0.00
+11	5810105	44.21	0.37	0.00	74.70	0.93	0.00
+11	6411935	172.80	0.50	0.00	327.69	1.00	0.00
+11	6461788	26.34	1.33	0.00	66.87	1.99	0.00
+11	6599848	4.41	0.42	0.00	21.15	0.01	0.00
+11	8828455	1.38	0.00	0.00	5.39	0.00	0.00
+11	9113008	113.97	0.01	0.00	214.10	0.53	0.00
+11	9191042	3.91	0.10	0.00	16.51	0.01	0.00
+11	9492934	45.96	0.00	0.00	72.78	0.41	0.00
+11	9610585	63.56	2.15	0.00	172.09	3.21	0.00
+11	10472492	183.83	0.36	0.00	241.13	1.04	0.00
+11	10526826	81.72	1.36	0.00	148.29	0.00	0.00
+11	10527052	87.39	1.53	0.00	147.93	0.11	0.00
+11	10638577	48.97	0.00	0.00	165.90	1.05	0.00
+11	10838568	2.62	0.01	0.00	9.45	0.00	0.00
+11	11268136	1.87	0.71	0.00	9.87	2.88	0.00
+11	11268194	3.00	0.91	0.00	10.68	3.58	0.00
+11	11268564	9.84	0.66	0.00	31.63	6.62	0.00
+11	11268604	6.54	0.66	0.00	23.99	8.37	0.00
+11	11268636	3.28	0.95	0.00	16.69	7.24	0.00
+11	12031227	84.96	0.35	0.00	143.15	0.09	0.00
+11	12326184	4.66	0.09	0.00	15.11	0.05	0.00
+11	13061476	3.47	0.30	0.00	17.79	0.00	0.00
+11	13125583	3.23	0.55	0.00	3.85	0.20	0.00
+11	14025701	4.09	0.00	0.00	13.17	0.00	0.00
+11	14746855	2.97	0.18	0.00	10.72	0.63	0.00
+11	14873055	4.48	0.00	0.00	14.65	0.00	0.00
+11	15047144	5.38	0.00	0.00	38.49	0.29	0.00
+11	15440341	5.64	0.00	0.00	14.41	0.00	0.00
+11	16153881	5.16	0.01	0.00	19.48	1.54	0.00
+11	17035493	66.11	0.39	0.00	99.95	0.41	0.00
+11	17352477	40.23	0.13	0.00	68.07	0.23	0.00
+11	17375260	8.58	0.00	0.00	30.90	0.00	0.00
+11	17414777	57.99	0.16	0.00	76.21	0.09	0.00
+11	17498869	3.64	0.00	0.00	12.20	0.00	0.00
+11	18066297	1.18	0.00	0.00	4.32	0.20	0.00
+11	18066320	1.30	0.00	0.00	3.86	0.43	0.00
+11	18743396	67.69	0.73	0.00	99.80	0.01	0.00
+11	20048849	99.96	0.01	0.00	132.94	0.16	0.00
+11	20549863	2.04	0.00	0.00	13.03	0.00	0.00
+11	21720975	4.51	0.00	0.00	25.26	0.00	0.00
+11	21851564	2.49	0.00	0.00	6.41	0.00	0.00
+11	22099417	5.32	0.00	0.00	15.06	0.00	0.00
+11	22484590	2.22	0.00	0.00	30.23	0.75	0.00
+11	22533740	2.40	0.00	0.00	15.20	0.00	0.00
+11	23439995	6.17	0.00	0.00	26.36	0.54	0.00
+11	23750261	7.29	0.00	0.00	22.36	0.17	0.00
+11	23750267	7.11	0.00	0.00	22.34	0.12	0.00
+11	24365501	2.73	0.00	0.00	21.26	0.01	0.00
+11	24549096	2.21	0.00	0.00	14.82	0.00	0.00
+11	24655504	1.53	0.00	0.00	22.88	2.22	0.00
+11	24671518	1.49	0.00	0.00	31.83	0.00	0.00
+11	24728853	5.88	0.00	0.00	31.73	0.00	0.00
+11	24915318	1.60	0.00	0.00	36.67	0.48	0.00

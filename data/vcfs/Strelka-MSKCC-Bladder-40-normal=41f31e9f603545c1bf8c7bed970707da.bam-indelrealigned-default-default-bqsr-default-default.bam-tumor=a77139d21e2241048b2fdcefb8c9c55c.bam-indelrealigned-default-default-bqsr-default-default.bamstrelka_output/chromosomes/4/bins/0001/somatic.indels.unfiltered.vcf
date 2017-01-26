@@ -1,0 +1,202 @@
+##fileformat=VCFv4.1
+##fileDate=20160611
+##source=strelka
+##source_version=2.0.17.strelka1
+##startTime=Sat Jun 11 08:27:17 2016
+##cmdline=/demeter/scratch/ahujaa01/ksinai-demeter/toolkit/strelka.1.0.14/usr/libexec/strelka2 -clobber -filter-unanchored -min-paired-align-score 40 -min-single-align-score 10 -min-qscore 0 -report-range-begin 25000001 -report-range-end 50000000 -samtools-reference /demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta -max-window-mismatch 3 20 -print-used-allele-counts -bam-seq-name 4 -genome-size 2900338458 -max-indel-size 50 -indel-nonsite-match-prob 0.5 --min-contig-open-end-support 35 --somatic-snv-rate 0.000001 --shared-site-error-rate 0.0000005 --shared-site-error-strand-bias-fraction 0.5 --somatic-indel-rate 0.000001 --shared-indel-error-rate 0.0000001 --tier2-min-single-align-score 5 --tier2-min-paired-align-score 5 --tier2-single-align-score-rescue-mode --tier2-mismatch-density-filter-count 10 --tier2-no-filter-unanchored --tier2-indel-nonsite-match-prob 0.25 --tier2-include-singleton --tier2-include-anomalous -bam-file /demeter/scratch/ahujaa01/ksinai-demeter/41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam --tumor-bam-file /demeter/scratch/ahujaa01/ksinai-demeter/a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bam --somatic-snv-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-40-normal=41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/4/bins/0001/somatic.snvs.unfiltered.vcf --somatic-indel-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-40-normal=41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/4/bins/0001/somatic.indels.unfiltered.vcf --variant-window-flank-file 50 /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-40-normal=41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/4/bins/0001/somatic.indels.unfiltered.vcf.window --max-input-depth 10000 --eland-compatibility --report-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-40-normal=41f31e9f603545c1bf8c7bed970707da.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=a77139d21e2241048b2fdcefb8c9c55c.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/4/bins/0001/strelka.stats
+##reference=file:///demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta
+##contig=<ID=1,length=249250621>
+##contig=<ID=2,length=243199373>
+##contig=<ID=3,length=198022430>
+##contig=<ID=4,length=191154276>
+##contig=<ID=5,length=180915260>
+##contig=<ID=6,length=171115067>
+##contig=<ID=7,length=159138663>
+##contig=<ID=8,length=146364022>
+##contig=<ID=9,length=141213431>
+##contig=<ID=10,length=135534747>
+##contig=<ID=11,length=135006516>
+##contig=<ID=12,length=133851895>
+##contig=<ID=13,length=115169878>
+##contig=<ID=14,length=107349540>
+##contig=<ID=15,length=102531392>
+##contig=<ID=16,length=90354753>
+##contig=<ID=17,length=81195210>
+##contig=<ID=18,length=78077248>
+##contig=<ID=19,length=59128983>
+##contig=<ID=20,length=63025520>
+##contig=<ID=21,length=48129895>
+##contig=<ID=22,length=51304566>
+##contig=<ID=X,length=155270560>
+##contig=<ID=Y,length=59373566>
+##contig=<ID=MT,length=16569>
+##contig=<ID=GL000207.1,length=4262>
+##contig=<ID=GL000226.1,length=15008>
+##contig=<ID=GL000229.1,length=19913>
+##contig=<ID=GL000231.1,length=27386>
+##contig=<ID=GL000210.1,length=27682>
+##contig=<ID=GL000239.1,length=33824>
+##contig=<ID=GL000235.1,length=34474>
+##contig=<ID=GL000201.1,length=36148>
+##contig=<ID=GL000247.1,length=36422>
+##contig=<ID=GL000245.1,length=36651>
+##contig=<ID=GL000197.1,length=37175>
+##contig=<ID=GL000203.1,length=37498>
+##contig=<ID=GL000246.1,length=38154>
+##contig=<ID=GL000249.1,length=38502>
+##contig=<ID=GL000196.1,length=38914>
+##contig=<ID=GL000248.1,length=39786>
+##contig=<ID=GL000244.1,length=39929>
+##contig=<ID=GL000238.1,length=39939>
+##contig=<ID=GL000202.1,length=40103>
+##contig=<ID=GL000234.1,length=40531>
+##contig=<ID=GL000232.1,length=40652>
+##contig=<ID=GL000206.1,length=41001>
+##contig=<ID=GL000240.1,length=41933>
+##contig=<ID=GL000236.1,length=41934>
+##contig=<ID=GL000241.1,length=42152>
+##contig=<ID=GL000243.1,length=43341>
+##contig=<ID=GL000242.1,length=43523>
+##contig=<ID=GL000230.1,length=43691>
+##contig=<ID=GL000237.1,length=45867>
+##contig=<ID=GL000233.1,length=45941>
+##contig=<ID=GL000204.1,length=81310>
+##contig=<ID=GL000198.1,length=90085>
+##contig=<ID=GL000208.1,length=92689>
+##contig=<ID=GL000191.1,length=106433>
+##contig=<ID=GL000227.1,length=128374>
+##contig=<ID=GL000228.1,length=129120>
+##contig=<ID=GL000214.1,length=137718>
+##contig=<ID=GL000221.1,length=155397>
+##contig=<ID=GL000209.1,length=159169>
+##contig=<ID=GL000218.1,length=161147>
+##contig=<ID=GL000220.1,length=161802>
+##contig=<ID=GL000213.1,length=164239>
+##contig=<ID=GL000211.1,length=166566>
+##contig=<ID=GL000199.1,length=169874>
+##contig=<ID=GL000217.1,length=172149>
+##contig=<ID=GL000216.1,length=172294>
+##contig=<ID=GL000215.1,length=172545>
+##contig=<ID=GL000205.1,length=174588>
+##contig=<ID=GL000219.1,length=179198>
+##contig=<ID=GL000224.1,length=179693>
+##contig=<ID=GL000223.1,length=180455>
+##contig=<ID=GL000195.1,length=182896>
+##contig=<ID=GL000212.1,length=186858>
+##contig=<ID=GL000222.1,length=186861>
+##contig=<ID=GL000200.1,length=187035>
+##contig=<ID=GL000193.1,length=189789>
+##contig=<ID=GL000194.1,length=191469>
+##contig=<ID=GL000225.1,length=211173>
+##contig=<ID=GL000192.1,length=547496>
+##content=strelka somatic indel calls
+##germlineIndelTheta=0.0001
+##priorSomaticIndelRate=1e-06
+##INFO=<ID=QSI,Number=1,Type=Integer,Description="Quality score for any somatic variant, ie. for the ALT haplotype to be present at a significantly different frequency in the tumor and normal">
+##INFO=<ID=TQSI,Number=1,Type=Integer,Description="Data tier used to compute QSI">
+##INFO=<ID=NT,Number=1,Type=String,Description="Genotype of the normal in all data tiers, as used to classify somatic variants. One of {ref,het,hom,conflict}.">
+##INFO=<ID=QSI_NT,Number=1,Type=Integer,Description="Quality score reflecting the joint probability of a somatic variant and NT">
+##INFO=<ID=TQSI_NT,Number=1,Type=Integer,Description="Data tier used to compute QSI_NT">
+##INFO=<ID=SGT,Number=1,Type=String,Description="Most likely somatic genotype excluding normal noise states">
+##INFO=<ID=RU,Number=1,Type=String,Description="Smallest repeating sequence unit in inserted or deleted sequence">
+##INFO=<ID=RC,Number=1,Type=Integer,Description="Number of times RU repeats in the reference allele">
+##INFO=<ID=IC,Number=1,Type=Integer,Description="Number of times RU repeats in the indel allele">
+##INFO=<ID=IHP,Number=1,Type=Integer,Description="Largest reference interrupted homopolymer length intersecting with the indel">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SOMATIC,Number=0,Type=Flag,Description="Somatic mutation">
+##INFO=<ID=OVERLAP,Number=0,Type=Flag,Description="Somatic indel possibly overlaps a second indel.">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth for tier1">
+##FORMAT=<ID=DP2,Number=1,Type=Integer,Description="Read depth for tier2">
+##FORMAT=<ID=TAR,Number=2,Type=Integer,Description="Reads strongly supporting alternate allele for tiers 1,2">
+##FORMAT=<ID=TIR,Number=2,Type=Integer,Description="Reads strongly supporting indel allele for tiers 1,2">
+##FORMAT=<ID=TOR,Number=2,Type=Integer,Description="Other reads (weak support or insufficient indel breakpoint overlap) for tiers 1,2">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NORMAL	TUMOR
+4	25158424	.	GGT	G	.	.	SOMATIC;QSI=14;TQSI=1;NT=ref;QSI_NT=14;TQSI_NT=1;SGT=ref->het;RU=GT;RC=7;IC=6;IHP=3	DP:DP2:TAR:TIR:TOR	6:6:7,7:0,0:1,1	25:25:21,21:3,3:2,2
+4	25160732	.	T	TA	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=ref->ref;RU=A;RC=15;IC=16;IHP=15	DP:DP2:TAR:TIR:TOR	37:37:21,22:3,3:12,11	71:71:36,39:14,15:21,19
+4	26319751	.	G	GCA	.	.	SOMATIC;QSI=10;TQSI=2;NT=ref;QSI_NT=10;TQSI_NT=2;SGT=ref->het;RU=CA;RC=10;IC=11;IHP=2	DP:DP2:TAR:TIR:TOR	6:6:6,6:0,0:0,0	22:22:17,17:3,4:2,1
+4	27956273	.	GCACACACA	G	.	.	SOMATIC;QSI=33;TQSI=1;NT=ref;QSI_NT=33;TQSI_NT=1;SGT=ref->hom;RU=CA;RC=16;IC=12;IHP=2	DP:DP2:TAR:TIR:TOR	3:3:3,4:0,0:1,1	25:25:0,0:17,19:9,7
+4	28390533	.	CT	C	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=T;RC=8;IC=7;IHP=9	DP:DP2:TAR:TIR:TOR	4:4:4,4:0,0:0,0	3:3:0,0:3,3:0,0
+4	28551736	.	G	GAC	.	.	SOMATIC;QSI=12;TQSI=1;NT=ref;QSI_NT=12;TQSI_NT=1;SGT=ref->het;RU=AC;RC=11;IC=12;IHP=3	DP:DP2:TAR:TIR:TOR	7:7:6,6:0,0:1,1	16:16:2,2:12,12:1,1
+4	29493355	.	TTG	T	.	.	SOMATIC;QSI=4;TQSI=1;NT=ref;QSI_NT=4;TQSI_NT=1;SGT=het->het;RU=TG;RC=13;IC=12;IHP=4	DP:DP2:TAR:TIR:TOR	5:5:4,4:0,0:1,1	20:20:14,15:3,3:3,3
+4	29631666	.	AAAAAC	A	.	.	SOMATIC;QSI=2;TQSI=1;NT=ref;QSI_NT=2;TQSI_NT=1;SGT=het->het;RU=AAAAC;RC=6;IC=5;IHP=9	DP:DP2:TAR:TIR:TOR	2:2:2,2:0,0:0,0	6:6:0,0:6,6:0,0
+4	30074681	.	CAG	C	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=AG;RC=8;IC=7;IHP=2	DP:DP2:TAR:TIR:TOR	7:7:6,6:0,0:1,1	10:10:5,5:3,4:2,2
+4	30179023	.	ATGTGTGTGTGTGTGTGTGTG	A	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=TG;RC=22;IC=12;IHP=2	DP:DP2:TAR:TIR:TOR	2:2:2,2:0,0:0,0	8:8:0,0:4,4:4,4
+4	30841651	.	AGTGT	A	.	.	SOMATIC;QSI=17;TQSI=1;NT=ref;QSI_NT=17;TQSI_NT=1;SGT=ref->het;RU=GT;RC=12;IC=10;IHP=2	DP:DP2:TAR:TIR:TOR	12:12:12,12:0,0:0,0	21:21:12,12:3,3:8,8
+4	31273748	.	TTG	T	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=TG;RC=12;IC=11;IHP=4	DP:DP2:TAR:TIR:TOR	5:5:5,5:0,0:0,0	6:6:2,2:3,3:1,1
+4	31538018	.	A	AGT	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=GT;RC=17;IC=18;IHP=2	DP:DP2:TAR:TIR:TOR	3:3:1,1:0,0:2,2	11:11:1,1:9,9:1,2
+4	31708458	.	TAC	T	.	.	SOMATIC;QSI=11;TQSI=1;NT=ref;QSI_NT=11;TQSI_NT=1;SGT=ref->hom;RU=AC;RC=17;IC=16;IHP=2;OVERLAP	DP:DP2:TAR:TIR:TOR	3:3:3,3:0,0:0,0	13:13:0,0:9,9:4,4
+4	33024796	.	GCA	G	.	.	SOMATIC;QSI=19;TQSI=1;NT=ref;QSI_NT=19;TQSI_NT=1;SGT=ref->het;RU=CA;RC=10;IC=9;IHP=2	DP:DP2:TAR:TIR:TOR	16:16:14,14:0,0:2,2	9:9:6,6:3,3:0,0
+4	33519762	.	CGT	C	.	.	SOMATIC;QSI=12;TQSI=1;NT=ref;QSI_NT=12;TQSI_NT=1;SGT=ref->het;RU=GT;RC=11;IC=10;IHP=3	DP:DP2:TAR:TIR:TOR	7:7:7,7:0,0:0,0	25:25:20,20:5,5:0,0
+4	33569929	.	CCA	C	.	.	SOMATIC;QSI=2;TQSI=2;NT=ref;QSI_NT=2;TQSI_NT=2;SGT=het->het;RU=CA;RC=18;IC=17;IHP=3	DP:DP2:TAR:TIR:TOR	6:6:6,6:0,0:0,0	17:17:12,12:4,5:2,1
+4	34088909	.	G	GTA	.	.	SOMATIC;QSI=3;TQSI=1;NT=ref;QSI_NT=3;TQSI_NT=1;SGT=het->het;RU=TA;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	4:4:3,3:0,0:1,1	19:19:15,15:3,3:1,1
+4	34397225	.	TAC	T	.	.	SOMATIC;QSI=6;TQSI=1;NT=ref;QSI_NT=6;TQSI_NT=1;SGT=ref->het;RU=AC;RC=12;IC=11;IHP=2	DP:DP2:TAR:TIR:TOR	8:8:7,7:0,0:1,1	19:19:13,13:4,4:2,2
+4	34646282	.	CGT	C	.	.	SOMATIC;QSI=5;TQSI=1;NT=ref;QSI_NT=5;TQSI_NT=1;SGT=ref->het;RU=GT;RC=7;IC=6;IHP=2	DP:DP2:TAR:TIR:TOR	5:5:4,4:0,0:1,1	18:18:15,15:3,3:0,0
+4	34693718	.	GCA	G	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=CA;RC=15;IC=14;IHP=2	DP:DP2:TAR:TIR:TOR	2:2:2,2:0,0:0,0	17:17:12,13:3,3:3,2
+4	34861752	.	TTG	T	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=TG;RC=12;IC=11;IHP=3	DP:DP2:TAR:TIR:TOR	2:2:0,0:0,0:2,2	27:27:15,15:3,3:10,10
+4	34933500	.	CACAT	C	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=ACAT;RC=1;IC=0;IHP=2	DP:DP2:TAR:TIR:TOR	1:1:1,1:0,0:0,0	5:5:0,0:5,5:0,0
+4	36299559	.	CGT	C	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=GT;RC=9;IC=8;IHP=2	DP:DP2:TAR:TIR:TOR	5:5:5,5:0,0:0,0	17:17:8,8:4,4:5,5
+4	36836757	.	A	ACACACACACACG	.	.	SOMATIC;QSI=8;TQSI=1;NT=ref;QSI_NT=8;TQSI_NT=1;SGT=ref->het;RU=CACACACACACG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	9:9:8,8:0,0:6,6	12:12:6,6:2,2:9,9
+4	38404876	.	A	ATG	.	.	SOMATIC;QSI=5;TQSI=1;NT=ref;QSI_NT=5;TQSI_NT=1;SGT=het->het;RU=TG;RC=15;IC=16;IHP=2	DP:DP2:TAR:TIR:TOR	10:10:5,5:0,0:5,5	14:14:3,3:10,10:1,2
+4	38413485	.	TAC	T	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=AC;RC=17;IC=16;IHP=3	DP:DP2:TAR:TIR:TOR	5:5:5,5:0,0:0,0	9:9:2,2:3,3:6,6
+4	39910172	.	GA	G	.	.	SOMATIC;QSI=2;TQSI=1;NT=het;QSI_NT=2;TQSI_NT=1;SGT=het->het;RU=A;RC=8;IC=7;IHP=9	DP:DP2:TAR:TIR:TOR	40:40:18,18:20,20:3,3	62:62:51,51:9,9:1,1
+4	39928486	.	T	TA	.	.	SOMATIC;QSI=19;TQSI=1;NT=ref;QSI_NT=19;TQSI_NT=1;SGT=ref->het;RU=A;RC=11;IC=12;IHP=12	DP:DP2:TAR:TIR:TOR	11:11:11,11:0,0:0,0	41:41:24,24:8,8:9,9
+4	40205141	.	AGT	A	.	.	SOMATIC;QSI=5;TQSI=1;NT=ref;QSI_NT=5;TQSI_NT=1;SGT=het->het;RU=GT;RC=11;IC=10;IHP=2	DP:DP2:TAR:TIR:TOR	6:6:5,5:0,0:1,1	18:18:13,13:3,3:3,3
+4	40297386	.	CCTCCAT	C	.	.	SOMATIC;QSI=1;TQSI=2;NT=ref;QSI_NT=1;TQSI_NT=2;SGT=ref->het;RU=CTCCAT;RC=2;IC=1;IHP=4	DP:DP2:TAR:TIR:TOR	27:27:29,31:0,1:3,1	49:49:42,42:3,3:10,10
+4	40297434	.	TCTCCAC	T	.	.	SOMATIC;QSI=5;TQSI=2;NT=het;QSI_NT=5;TQSI_NT=2;SGT=het->het;RU=CTCCAC;RC=1;IC=0;IHP=4	DP:DP2:TAR:TIR:TOR	29:29:14,15:11,11:4,3	62:62:55,55:2,2:7,7
+4	40434713	.	GGCGGCTGCGGCC	G	.	.	SOMATIC;QSI=35;TQSI=1;NT=ref;QSI_NT=35;TQSI_NT=1;SGT=ref->het;RU=GCGGCTGCGGCC;RC=1;IC=0;IHP=4	DP:DP2:TAR:TIR:TOR	127:127:127,128:0,0:9,8	184:184:175,176:4,4:18,18
+4	41493349	.	T	TCCTCACCTCCCAGACGGGGCGGCCAGGCAGAGACGCC	.	.	SOMATIC;QSI=3;TQSI=1;NT=het;QSI_NT=3;TQSI_NT=1;SGT=het->hom;RU=CCTCACCTCCCAGACGGGGCGGCCAGGCAGAGACGCC;RC=0;IC=1;IHP=3	DP:DP2:TAR:TIR:TOR	25:25:8,9:18,18:4,3	30:30:0,0:27,30:8,8
+4	42502382	.	AAAAACAAAAC	A	.	.	SOMATIC;QSI=2;TQSI=1;NT=ref;QSI_NT=2;TQSI_NT=1;SGT=het->het;RU=AAAAC;RC=9;IC=7;IHP=9	DP:DP2:TAR:TIR:TOR	3:3:1,1:0,0:2,2	7:7:0,0:7,7:0,0
+4	46541274	.	TTG	T	.	.	SOMATIC;QSI=3;TQSI=1;NT=ref;QSI_NT=3;TQSI_NT=1;SGT=het->het;RU=TG;RC=13;IC=12;IHP=4	DP:DP2:TAR:TIR:TOR	2:2:2,2:0,0:0,0	22:22:16,17:3,3:4,4
+4	46839291	.	TAC	T	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=AC;RC=20;IC=19;IHP=2	DP:DP2:TAR:TIR:TOR	6:6:5,5:0,0:1,1	15:15:4,4:3,3:8,8
+4	47015156	.	C	CTG	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=TG;RC=12;IC=13;IHP=3	DP:DP2:TAR:TIR:TOR	4:4:0,3:0,0:4,1	16:16:1,1:11,11:4,4
+4	48381690	.	CT	C	.	.	SOMATIC;QSI=23;TQSI=1;NT=ref;QSI_NT=23;TQSI_NT=1;SGT=ref->het;RU=T;RC=13;IC=12;IHP=20	DP:DP2:TAR:TIR:TOR	20:20:20,20:0,0:1,1	40:40:19,19:12,12:10,10
+4	49094109	.	C	CGGTTG	.	.	SOMATIC;QSI=32;TQSI=1;NT=ref;QSI_NT=32;TQSI_NT=1;SGT=ref->het;RU=GGTTG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	54:54:46,92:0,0:7,1	113:113:90,156:4,6:19,5
+4	49096991	.	CATTCAGGTTG	C	.	.	SOMATIC;QSI=3;TQSI=2;NT=ref;QSI_NT=3;TQSI_NT=2;SGT=ref->het;RU=ATTCAGGTTG;RC=1;IC=0;IHP=2	DP:DP2:TAR:TIR:TOR	49:49:24,57:0,0:27,17	79:79:38,80:5,6:36,36
+4	49101764	.	TC	T	.	.	SOMATIC;QSI=22;TQSI=1;NT=ref;QSI_NT=22;TQSI_NT=1;SGT=ref->het;RU=C;RC=2;IC=1;IHP=3	DP:DP2:TAR:TIR:TOR	20:20:16,33:0,0:9,5	31:31:20,38:4,5:11,4
+4	49104567	.	C	CGGTTG	.	.	SOMATIC;QSI=11;TQSI=2;NT=ref;QSI_NT=11;TQSI_NT=2;SGT=ref->het;RU=GGTTG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	146:146:113,247:0,2:53,8	266:266:192,331:6,7:94,47
+4	49105929	.	ATTCCG	A	.	.	SOMATIC;QSI=21;TQSI=1;NT=ref;QSI_NT=21;TQSI_NT=1;SGT=ref->het;RU=TTCCG;RC=1;IC=0;IHP=2	DP:DP2:TAR:TIR:TOR	26:26:20,40:0,0:7,6	34:34:23,59:3,6:10,7
+4	49108151	.	T	TC	.	.	SOMATIC;QSI=12;TQSI=1;NT=ref;QSI_NT=12;TQSI_NT=1;SGT=ref->het;RU=C;RC=0;IC=1;IHP=4	DP:DP2:TAR:TIR:TOR	8:8:7,13:0,0:1,0	24:24:13,23:3,3:8,0
+4	49108152	.	GTCTTGT	G	.	.	SOMATIC;QSI=17;TQSI=1;NT=ref;QSI_NT=17;TQSI_NT=1;SGT=ref->het;RU=TCTTGT;RC=1;IC=0;IHP=5	DP:DP2:TAR:TIR:TOR	8:8:11,17:0,0:1,1	24:24:12,23:3,3:13,5
+4	49109730	.	CCATTCCATTG	C	.	.	SOMATIC;QSI=13;TQSI=1;NT=ref;QSI_NT=13;TQSI_NT=1;SGT=ref->het;RU=CATTCCATTG;RC=1;IC=0;IHP=2	DP:DP2:TAR:TIR:TOR	15:15:9,26:0,0:13,7	17:17:12,20:6,9:14,16
+4	49109861	.	GATTCC	G	.	.	SOMATIC;QSI=21;TQSI=1;NT=ref;QSI_NT=21;TQSI_NT=1;SGT=ref->het;RU=ATTCC;RC=6;IC=5;IHP=2	DP:DP2:TAR:TIR:TOR	44:44:17,42:0,0:27,26	44:44:14,32:3,3:27,27
+4	49111803	.	C	CGGATG	.	.	SOMATIC;QSI=40;TQSI=2;NT=ref;QSI_NT=40;TQSI_NT=2;SGT=ref->het;RU=GGATG;RC=0;IC=1;IHP=3	DP:DP2:TAR:TIR:TOR	132:132:100,183:0,0:24,11	191:191:131,214:4,4:52,43
+4	49112417	.	T	TCCATG	.	.	SOMATIC;QSI=15;TQSI=1;NT=ref;QSI_NT=15;TQSI_NT=1;SGT=ref->het;RU=CCATG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	14:14:11,19:0,0:3,2	34:34:26,42:3,3:7,3
+4	49114743	.	C	CGGATG	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=ref->ref;RU=GGATG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	54:54:41,93:0,0:13,0	110:110:62,139:2,3:46,31
+4	49114808	.	C	CATGCA	.	.	SOMATIC;QSI=21;TQSI=1;NT=ref;QSI_NT=21;TQSI_NT=1;SGT=ref->het;RU=ATGCA;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	40:40:29,60:0,0:10,4	74:74:39,88:2,3:31,17
+4	49116447	.	C	CGTTCAACTCGGGTTG	.	.	SOMATIC;QSI=24;TQSI=1;NT=ref;QSI_NT=24;TQSI_NT=1;SGT=ref->het;RU=GTTCAACTCGGGTTG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	29:29:25,33:0,0:3,0	28:28:22,40:3,3:3,0
+4	49118936	.	C	CGGGTT	.	.	SOMATIC;QSI=10;TQSI=1;NT=ref;QSI_NT=10;TQSI_NT=1;SGT=ref->het;RU=GGGTT;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	31:31:23,47:0,0:8,0	73:73:47,86:2,4:24,8
+4	49121142	.	T	TCATTC	.	.	SOMATIC;QSI=13;TQSI=1;NT=ref;QSI_NT=13;TQSI_NT=1;SGT=ref->het;RU=CATTC;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	12:12:7,19:0,0:5,1	24:24:16,24:4,4:4,3
+4	49121173	.	GATTCCATTCC	G	.	.	SOMATIC;QSI=11;TQSI=1;NT=ref;QSI_NT=11;TQSI_NT=1;SGT=ref->het;RU=ATTCC;RC=9;IC=7;IHP=2	DP:DP2:TAR:TIR:TOR	18:18:7,13:0,0:14,15	21:21:12,14:3,4:9,10
+4	49122225	.	T	TTCCATTCAAA	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=ref->het;RU=TCCATTCAAA;RC=0;IC=1;IHP=3	DP:DP2:TAR:TIR:TOR	17:17:16,18:1,1:1,2	50:50:36,45:7,7:8,4
+4	49122232	.	C	CCAATCCATTG	.	.	SOMATIC;QSI=18;TQSI=1;NT=ref;QSI_NT=18;TQSI_NT=1;SGT=ref->het;RU=CAATCCATTG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	19:19:17,21:0,0:3,2	56:56:41,50:4,4:13,9
+4	49123002	.	CATTCCATTCA	C	.	.	SOMATIC;QSI=26;TQSI=1;NT=ref;QSI_NT=26;TQSI_NT=1;SGT=ref->het;RU=ATTCCATTCA;RC=1;IC=0;IHP=2	DP:DP2:TAR:TIR:TOR	40:40:35,57:0,0:8,3	56:56:47,68:4,4:9,6
+4	49123128	.	A	ATTCTGTTCGG	.	.	SOMATIC;QSI=27;TQSI=1;NT=ref;QSI_NT=27;TQSI_NT=1;SGT=ref->het;RU=TTCTGTTCGG;RC=0;IC=1;IHP=3	DP:DP2:TAR:TIR:TOR	39:39:37,50:0,0:4,0	66:66:53,71:3,3:12,8
+4	49124799	.	GTTCCA	G	.	.	SOMATIC;QSI=25;TQSI=2;NT=ref;QSI_NT=25;TQSI_NT=2;SGT=ref->het;RU=TTCCA;RC=4;IC=3;IHP=2	DP:DP2:TAR:TIR:TOR	17:17:17,26:0,0:6,4	30:30:12,23:4,4:19,16
+4	49129060	.	T	TTTGGGTTGAA	.	.	SOMATIC;QSI=2;TQSI=2;NT=ref;QSI_NT=2;TQSI_NT=2;SGT=ref->het;RU=TTGGGTTGAA;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	31:31:23,40:0,1:8,5	43:43:30,50:3,3:11,10
+4	49129066	.	T	TTGAAC	.	.	SOMATIC;QSI=27;TQSI=1;NT=ref;QSI_NT=27;TQSI_NT=1;SGT=ref->het;RU=TGAAC;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	28:28:24,45:0,0:6,0	43:43:28,51:7,7:8,3
+4	49132002	.	T	TATGGA	.	.	SOMATIC;QSI=2;TQSI=2;NT=ref;QSI_NT=2;TQSI_NT=2;SGT=ref->ref;RU=ATGGA;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	30:30:28,51:0,0:2,0	47:47:42,81:2,2:3,2
+4	49138050	.	TGTTCC	T	.	.	SOMATIC;QSI=19;TQSI=1;NT=ref;QSI_NT=19;TQSI_NT=1;SGT=ref->het;RU=GTTCC;RC=1;IC=0;IHP=3	DP:DP2:TAR:TIR:TOR	7:7:17,31:0,0:7,6	14:14:4,6:5,7:22,37
+4	49139159	.	GTTCCA	G	.	.	SOMATIC;QSI=32;TQSI=1;NT=ref;QSI_NT=32;TQSI_NT=1;SGT=ref->het;RU=TTCCA;RC=4;IC=3;IHP=2	DP:DP2:TAR:TIR:TOR	20:20:13,58:0,0:35,9	26:26:5,22:6,8:60,61
+4	49142655	.	C	CTCTCGGGTTT	.	.	SOMATIC;QSI=7;TQSI=1;NT=ref;QSI_NT=7;TQSI_NT=1;SGT=ref->het;RU=TCTCGGGTTT;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	44:44:34,67:0,1:10,1	73:73:57,87:2,4:14,5
+4	49144145	.	C	CAATAG	.	.	SOMATIC;QSI=22;TQSI=1;NT=ref;QSI_NT=22;TQSI_NT=1;SGT=ref->het;RU=AATAG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	57:57:48,86:0,0:10,1	86:86:53,106:2,5:32,12
+4	49147648	.	C	CGGTTA	.	.	SOMATIC;QSI=26;TQSI=1;NT=ref;QSI_NT=26;TQSI_NT=1;SGT=ref->het;RU=GGTTA;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	24:24:18,34:0,0:7,0	16:16:8,27:3,4:5,1
+4	49155706	.	A	AC	.	.	SOMATIC;QSI=25;TQSI=1;NT=ref;QSI_NT=25;TQSI_NT=1;SGT=ref->het;RU=C;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	25:25:19,33:0,0:7,3	37:37:19,39:5,6:13,4
+4	49156519	.	GGTTGA	G	.	.	SOMATIC;QSI=12;TQSI=2;NT=ref;QSI_NT=12;TQSI_NT=2;SGT=ref->het;RU=GTTGA;RC=1;IC=0;IHP=3	DP:DP2:TAR:TIR:TOR	242:242:178,340:2,4:91,30	303:303:204,392:6,8:117,63
+4	49156598	.	C	CACCCGGATTT	.	.	SOMATIC;QSI=13;TQSI=2;NT=ref;QSI_NT=13;TQSI_NT=2;SGT=ref->het;RU=ACCCGGATTT;RC=0;IC=1;IHP=3	DP:DP2:TAR:TIR:TOR	73:73:37,111:0,0:41,2	118:118:64,157:3,3:60,25
+4	49156963	.	C	CGGATG	.	.	SOMATIC;QSI=3;TQSI=1;NT=ref;QSI_NT=3;TQSI_NT=1;SGT=het->het;RU=GGATG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	13:13:7,21:0,0:5,0	19:19:8,26:4,10:7,1
+4	49246288	.	ACTTC	A	.	.	SOMATIC;QSI=19;TQSI=1;NT=ref;QSI_NT=19;TQSI_NT=1;SGT=ref->het;RU=CTTC;RC=1;IC=0;IHP=2	DP:DP2:TAR:TIR:TOR	11:11:11,11:0,0:0,0	28:28:22,22:6,6:1,1
+4	49268353	.	A	AG	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=G;RC=0;IC=1;IHP=13	DP:DP2:TAR:TIR:TOR	5:5:5,5:0,0:0,0	18:18:5,5:7,7:4,4
+4	49272631	.	G	GGC	.	.	SOMATIC;QSI=1;TQSI=1;NT=ref;QSI_NT=1;TQSI_NT=1;SGT=het->het;RU=GC;RC=3;IC=4;IHP=3	DP:DP2:TAR:TIR:TOR	5:5:5,5:0,0:0,0	11:11:4,6:5,5:2,0
+4	49553178	.	CGAAG	C	.	.	SOMATIC;QSI=27;TQSI=1;NT=ref;QSI_NT=27;TQSI_NT=1;SGT=ref->het;RU=GAAG;RC=1;IC=0;IHP=2	DP:DP2:TAR:TIR:TOR	15:15:15,15:0,0:0,0	39:39:28,28:11,11:0,0
+4	49636277	.	T	TGAAAC	.	.	SOMATIC;QSI=17;TQSI=1;NT=ref;QSI_NT=17;TQSI_NT=1;SGT=ref->het;RU=GAAAC;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	18:18:12,29:0,0:6,2	42:42:20,50:3,3:19,4
+4	49637565	.	T	TCATCC	.	.	SOMATIC;QSI=66;TQSI=1;NT=ref;QSI_NT=66;TQSI_NT=1;SGT=ref->het;RU=CATCC;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	133:133:114,220:0,0:22,0	228:228:176,307:5,7:48,19
+4	49641023	.	A	AGTGCC	.	.	SOMATIC;QSI=18;TQSI=1;NT=ref;QSI_NT=18;TQSI_NT=1;SGT=ref->het;RU=GTGCC;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	15:15:15,27:0,0:0,0	31:31:24,49:4,4:3,2
+4	49642429	.	AATGG	A	.	.	SOMATIC;QSI=11;TQSI=1;NT=ref;QSI_NT=11;TQSI_NT=1;SGT=ref->het;RU=ATGG;RC=1;IC=0;IHP=2	DP:DP2:TAR:TIR:TOR	7:7:5,11:0,0:2,1	21:21:13,26:2,4:7,2
+4	49642441	.	T	TCATCC	.	.	SOMATIC;QSI=2;TQSI=1;NT=ref;QSI_NT=2;TQSI_NT=1;SGT=het->het;RU=CATCC;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	5:5:3,10:0,0:2,0	19:19:7,14:2,4:10,10
+4	49644644	.	T	TTAACC	.	.	SOMATIC;QSI=9;TQSI=1;NT=ref;QSI_NT=9;TQSI_NT=1;SGT=ref->het;RU=TAACC;RC=0;IC=1;IHP=3	DP:DP2:TAR:TIR:TOR	85:85:69,117:0,0:22,3	101:101:55,111:2,5:55,58
+4	49644660	.	G	GGTACA	.	.	SOMATIC;QSI=51;TQSI=2;NT=ref;QSI_NT=51;TQSI_NT=2;SGT=ref->het;RU=GTACA;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	106:106:89,152:0,0:23,5	148:148:120,225:4,4:35,17
+4	49644671	.	G	GATTTCAACGA	.	.	SOMATIC;QSI=25;TQSI=2;NT=ref;QSI_NT=25;TQSI_NT=2;SGT=ref->het;RU=ATTTCAACGA;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	107:107:92,161:0,0:21,2	157:157:135,242:4,4:29,11
+4	49645238	.	T	TGCAGG	.	.	SOMATIC;QSI=4;TQSI=1;NT=ref;QSI_NT=4;TQSI_NT=1;SGT=het->het;RU=GCAGG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	14:14:6,14:0,0:8,3	13:13:6,17:2,3:5,2
+4	49646711	.	G	GTACCC	.	.	SOMATIC;QSI=17;TQSI=1;NT=ref;QSI_NT=17;TQSI_NT=1;SGT=ref->het;RU=TACCC;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	15:15:11,21:0,0:4,1	28:28:21,34:4,4:5,10
+4	49650770	.	T	TGGAATGGAAG	.	.	SOMATIC;QSI=8;TQSI=1;NT=ref;QSI_NT=8;TQSI_NT=1;SGT=ref->het;RU=GGAATGGAAG;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	11:11:6,17:0,0:5,3	18:18:8,21:3,4:7,1
+4	49659615	.	T	TGGAAC	.	.	SOMATIC;QSI=24;TQSI=1;NT=ref;QSI_NT=24;TQSI_NT=1;SGT=ref->het;RU=GGAAC;RC=0;IC=1;IHP=2	DP:DP2:TAR:TIR:TOR	89:89:64,116:1,2:40,42	153:153:97,156:6,6:82,79

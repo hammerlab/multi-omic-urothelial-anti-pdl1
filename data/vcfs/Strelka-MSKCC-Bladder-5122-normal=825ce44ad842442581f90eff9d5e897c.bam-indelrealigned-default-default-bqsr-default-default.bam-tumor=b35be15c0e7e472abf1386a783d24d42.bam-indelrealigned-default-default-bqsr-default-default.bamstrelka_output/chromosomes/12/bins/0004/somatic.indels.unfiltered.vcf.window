@@ -1,0 +1,90 @@
+# ** strelka variant-window file **
+#$ CMDLINE /demeter/scratch/ahujaa01/ksinai-demeter/toolkit/strelka.1.0.14/usr/libexec/strelka2 -clobber -filter-unanchored -min-paired-align-score 40 -min-single-align-score 10 -min-qscore 0 -report-range-begin 100000001 -report-range-end 125000000 -samtools-reference /demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37decoy/b37decoy.fasta -max-window-mismatch 3 20 -print-used-allele-counts -bam-seq-name 12 -genome-size 2900338458 -max-indel-size 50 -indel-nonsite-match-prob 0.5 --min-contig-open-end-support 35 --somatic-snv-rate 0.000001 --shared-site-error-rate 0.0000005 --shared-site-error-strand-bias-fraction 0.5 --somatic-indel-rate 0.000001 --shared-indel-error-rate 0.0000001 --tier2-min-single-align-score 5 --tier2-min-paired-align-score 5 --tier2-single-align-score-rescue-mode --tier2-mismatch-density-filter-count 10 --tier2-no-filter-unanchored --tier2-indel-nonsite-match-prob 0.25 --tier2-include-singleton --tier2-include-anomalous -bam-file /demeter/scratch/ahujaa01/ksinai-demeter/825ce44ad842442581f90eff9d5e897c.bam-indelrealigned-default-default-bqsr-default-default.bam --tumor-bam-file /demeter/scratch/ahujaa01/ksinai-demeter/b35be15c0e7e472abf1386a783d24d42.bam-indelrealigned-default-default-bqsr-default-default.bam --somatic-snv-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-5122-normal=825ce44ad842442581f90eff9d5e897c.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=b35be15c0e7e472abf1386a783d24d42.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/12/bins/0004/somatic.snvs.unfiltered.vcf --somatic-indel-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-5122-normal=825ce44ad842442581f90eff9d5e897c.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=b35be15c0e7e472abf1386a783d24d42.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/12/bins/0004/somatic.indels.unfiltered.vcf --variant-window-flank-file 50 /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-5122-normal=825ce44ad842442581f90eff9d5e897c.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=b35be15c0e7e472abf1386a783d24d42.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/12/bins/0004/somatic.indels.unfiltered.vcf.window --max-input-depth 10000 --eland-compatibility --report-file /demeter/scratch/ahujaa01/ksinai-demeter/Strelka-MSKCC-Bladder-5122-normal=825ce44ad842442581f90eff9d5e897c.bam-indelrealigned-default-default-bqsr-default-default.bam-tumor=b35be15c0e7e472abf1386a783d24d42.bam-indelrealigned-default-default-bqsr-default-default.bamstrelka_output/chromosomes/12/bins/0004/strelka.stats
+#$ PROGRAM_VERSION 2.0.17.strelka1
+#$ START_TIME Sat Jun 11 06:04:53 2016
+#
+#$ FLANK_SIZE 50
+#
+#$ COLUMNS seq_name pos n1-win50_used n1-win50_filt n1-win50_submap t1-win50_used t1-win50_filt t1-win50_submap
+12	100060674	7.22	0.00	0.00	10.13	0.12	0.00
+12	101689236	31.95	2.03	0.00	36.12	0.00	0.00
+12	102008087	8.56	0.00	0.00	7.12	0.00	0.00
+12	102576307	25.05	1.47	0.00	27.45	0.00	0.00
+12	102712230	0.00	0.00	0.00	23.73	0.68	0.00
+12	104014402	20.77	0.00	0.00	24.02	0.09	0.00
+12	104171947	13.10	1.40	0.00	21.57	2.66	0.00
+12	104370186	4.07	0.00	0.00	16.98	0.63	0.00
+12	104415644	2.52	0.09	0.00	25.60	0.75	0.00
+12	104416548	3.31	0.00	0.00	14.30	0.00	0.00
+12	104597413	2.10	0.00	0.00	8.56	0.00	0.00
+12	104934908	5.95	0.00	0.00	13.92	0.00	0.00
+12	106385056	3.50	0.09	0.00	17.21	0.55	0.00
+12	106708313	26.54	0.28	0.00	97.53	2.37	0.00
+12	107002558	12.49	0.01	0.00	17.92	0.63	0.00
+12	107360876	10.82	0.32	0.00	20.87	0.00	0.00
+12	107426287	4.07	0.00	0.00	16.52	0.00	0.00
+12	107857983	2.62	0.08	0.00	11.82	0.00	0.00
+12	108560537	0.00	0.00	0.00	9.37	1.46	0.00
+12	108991233	4.43	0.00	0.00	13.28	0.00	0.00
+12	109300931	38.41	3.00	0.00	124.08	7.68	0.00
+12	110072227	5.54	2.25	0.00	48.91	8.13	0.00
+12	110072254	7.90	3.02	0.00	53.44	10.86	0.00
+12	110072779	23.38	17.22	0.00	106.91	52.87	0.00
+12	110073131	8.44	0.75	0.00	37.65	5.09	0.00
+12	110073148	8.50	0.75	0.00	39.05	5.59	0.00
+12	110073188	6.57	0.94	0.00	31.92	7.60	0.00
+12	110073316	26.25	2.69	0.00	57.99	13.27	0.00
+12	110413910	3.92	0.00	0.00	13.77	0.00	0.00
+12	110825056	3.37	0.35	0.00	22.64	2.74	0.00
+12	110825069	4.15	0.78	0.00	23.35	3.11	0.00
+12	113926882	3.20	0.28	0.00	50.87	1.26	0.00
+12	113998714	2.74	0.00	0.00	9.84	0.00	0.00
+12	115073312	3.01	0.00	0.00	12.25	0.69	0.00
+12	115116793	3.21	0.00	0.00	56.95	0.01	0.00
+12	115129641	2.71	0.00	0.00	72.29	0.66	0.00
+12	115168135	2.79	0.00	0.00	18.87	0.26	0.00
+12	115388292	2.15	0.00	0.00	33.34	0.68	0.00
+12	115433673	1.11	0.00	0.00	23.74	1.69	0.00
+12	115787662	2.84	0.00	0.00	14.33	0.00	0.00
+12	116225574	4.90	0.00	0.00	13.94	0.00	0.00
+12	116679147	1.96	0.35	0.00	23.28	1.86	0.00
+12	116772109	7.60	0.00	0.00	16.87	0.00	0.00
+12	118232094	1.18	0.18	0.00	16.68	0.32	0.00
+12	118404446	2.04	0.30	0.00	19.43	0.93	0.00
+12	119104479	4.16	0.00	0.00	39.89	0.14	0.00
+12	119145376	11.17	4.43	0.00	113.52	13.59	0.00
+12	119145669	16.76	5.27	0.00	93.90	15.95	0.00
+12	119145740	12.20	5.14	0.00	59.62	7.56	0.00
+12	119145902	16.38	12.28	0.00	67.20	21.07	0.00
+12	119145992	19.66	7.09	0.00	116.09	17.73	0.00
+12	119513248	4.58	1.49	0.00	22.75	0.76	0.00
+12	119513458	0.92	0.00	0.00	26.36	1.51	0.00
+12	119642191	3.08	0.00	0.00	47.85	0.01	0.00
+12	119666267	5.62	0.00	0.00	32.67	0.05	0.00
+12	119750850	0.00	0.00	0.00	23.44	0.69	0.00
+12	119782621	0.75	0.00	0.00	45.33	0.28	0.00
+12	119805870	3.54	0.50	0.00	35.59	3.54	0.00
+12	119824799	0.88	0.00	0.00	31.87	1.20	0.00
+12	119868002	3.68	0.00	0.00	27.85	0.69	0.00
+12	119957644	4.30	0.00	0.00	37.86	0.60	0.00
+12	120147569	1.98	0.00	0.00	40.08	3.79	0.00
+12	120147571	1.96	0.00	0.00	40.26	4.01	0.00
+12	120210816	10.36	1.56	0.00	43.33	0.93	0.00
+12	120527110	6.77	0.00	0.00	15.86	0.00	0.00
+12	120741313	20.56	0.62	0.00	50.30	1.19	0.00
+12	120843597	1.29	0.00	0.00	8.28	0.00	0.00
+12	121093629	64.39	0.00	0.00	53.59	0.20	0.00
+12	121601161	4.41	0.00	0.00	12.29	0.08	0.00
+12	121603825	46.99	0.00	0.00	37.43	0.01	0.00
+12	121912985	5.96	0.00	0.00	17.07	0.08	0.00
+12	122359397	75.54	0.03	0.00	137.51	1.09	0.00
+12	122361929	51.51	0.09	0.00	58.37	0.21	0.00
+12	122459822	6.89	0.00	0.00	23.80	0.00	0.00
+12	122600636	12.24	0.00	0.00	13.72	1.16	0.00
+12	122600647	11.58	0.00	0.00	13.21	1.16	0.00
+12	122618617	54.27	0.01	0.00	30.10	0.00	0.00
+12	122760191	2.55	0.00	0.00	14.80	0.06	0.00
+12	123320194	117.47	2.82	0.00	110.41	0.41	0.00
+12	123343572	56.58	0.00	0.00	50.73	0.00	0.00
+12	123345756	73.72	2.31	0.00	62.37	0.00	0.00
+12	124923950	11.45	0.67	0.00	10.61	1.21	0.00
