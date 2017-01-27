@@ -1,0 +1,8 @@
+cohorts==0.4.2
+survivalstan
+rpy2==2.8.2
+git+git://github.com/jburos/stancache
+git+git://github.com/jburos/nbutils
+six>=1.10.0
+Pillow>=3.4.2
+statsmodels
