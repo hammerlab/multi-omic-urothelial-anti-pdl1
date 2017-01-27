@@ -1,0 +1,27 @@
+patient_id,is_benefit,IC Level,path
+0040,False,IC0,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_6_TCCGCGAA-TATAGCCT-kallisto/
+0471,False,IC0,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_6_AGCGATAG-TATAGCCT-kallisto/
+0522,False,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_5_CGCTCATT-ATAGAGGC-kallisto/
+1233,True,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_5_ATTACTCG-TATAGCCT-kallisto/
+1249,False,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_5_TCCGGAGA-TATAGCCT-kallisto/
+1849,True,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_7_CGCTCATT-TATAGCCT-kallisto/
+1994,False,IC0,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_7_GAGATTCC-TATAGCCT-kallisto/
+2131,True,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_7_TCCGGAGA-CCTATCCT-kallisto/
+2278,True,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_7_ATTCAGAA-TATAGCCT-kallisto/
+2389,True,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_7_GAATTCGT-TATAGCCT-kallisto/
+2849,False,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_7_CTGAAGCT-TATAGCCT-kallisto/
+2937,False,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_4_TAATGCGC-TATAGCCT-kallisto/
+3529,False,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_4_CGGCTATG-TATAGCCT-kallisto/
+4072,False,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_6_TCTCGCGC-TATAGCCT-kallisto/
+5037,True,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_5_ATTACTCG-ATAGAGGC-kallisto/
+5122,True,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_5_TCCGGAGA-ATAGAGGC-kallisto/
+5338,False,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_7_GAGATTCC-ATAGAGGC-kallisto/
+6229,True,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_5_ATTCAGAA-ATAGAGGC-kallisto/
+6428,False,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_6_GAATTCGT-ATAGAGGC-kallisto/
+6800,True,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_4_CTGAAGCT-ATAGAGGC-kallisto/
+7577,False,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_4_TAATGCGC-ATAGAGGC-kallisto/
+7729,False,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_6_CGGCTATG-ATAGAGGC-kallisto/
+8728,False,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_6_TCCGCGAA-ATAGAGGC-kallisto/
+9517,False,IC0,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_4_TCTCGCGC-ATAGAGGC-kallisto/
+9723,False,IC2,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_6_AGCGATAG-ATAGAGGC-kallisto/
+9881,False,IC1,/Users/arahuja/src/hammerlab/bladder-analyses/kallisto//gerald_H5NKVBBXX_5_ATTACTCG-CCTATCCT-kallisto/

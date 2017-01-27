@@ -1,0 +1,234 @@
+---
+title: "Estimate power for mutational load <> PFS"
+author: "Jacqueline Buros"
+date: "September 20, 2016"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+```
+
+```{r init, echo=FALSE}
+suppressPackageStartupMessages(suppressMessages(suppressWarnings(library(tidyverse))))
+set.seed(12344556)
+```
+
+## Introduction
+
+In general, we will estimate the power to detect a "significant" effect 
+using simulation.
+
+The process to do this is fairly straightforward:
+
+1. Write a function to simulate data according to the alternative hypothesis (H1)
+2. Repeat the data simulation X times (we choose X=1000)
+3. Analyze each replicated dataset as you would the real data (ie do the same statistical test)
+4. Compute the power to detect an effect at p < alpha (ie, the proportion of trials with p < alpha)
+
+## The Plan
+
+In our case, we have a fixed sample size of ~29 patients, so we treat this as given.
+
+We want to simulate `mutation_load` values for `benefit` and `non-benefit` patients, which will be similar to those observed in the Rosenberg et al 2016 cohort. The only difference in our simulations should be the reduced sample size -- they had a sample size of ~150 patients whereas we will use a sample size of ~29.
+
+The question at hand is, if we saw the same association in our cohort as they saw in the larger cohort, would this be statistically significant?
+
+They observed
+
+  1. median mutation load among benefit patients of 12.4
+  2. median mutation load among non-benefit patients of 6.4
+  3. approx 20% of patients had a durable reponse
+
+We will use these values in our simulations.
+
+## Data simulation
+
+One challenge in simulating these data is that the Rosenberg et al. paper used a non-parametric statistical test, and so we do not have an easy parametric form from which to simulate these data. 
+
+As a starting point, we will try using an exponential distribution to simulate these data, since counts are often distributed exponentially. Note that this is a parameter that we can modify later if it doesn't work well; we will start here and see how reasonable the simulated data are.
+
+```{r sim-data-function}
+library(tidyverse)
+
+## generate simulated data 
+sim_data <- function(index = 1, 
+                     n = 30,
+                     loc_benefit = 12.4,
+                     loc_non = 6.4,
+                     prop_benefit = 0.2
+) {
+  n_benefit = n*prop_benefit
+  n_non = n*(1-prop_benefit)
+  sim_f = function(n, loc) rexp(n = n, rate = 1/loc)
+  x_benefit <- sim_f(n = n_benefit, loc = loc_benefit)
+  x_non <- sim_f(n = n_non, loc = loc_non)
+  df <- tbl_df(list(x = x_benefit, group = 'benefit')) %>%
+    bind_rows(tbl_df(list(x = x_non, group = 'non')))
+  df
+}
+```
+
+Notice that we have put default values here which match those we observed in the Rosenberg et al publication.
+
+We can use this function to simulate a dataset like so:
+
+```{r sim-data-test}
+df <- sim_data()
+df %>% head()
+```
+
+Here is a plot of these simulated data:
+```{r sim-data-test-plot}
+ggplot(df, aes(y = x, x = group, group = group, colour = group)) +
+  geom_boxplot()
+```
+
+## Simulating replicate samples
+
+Next we will generate 1000 simulations, each using the same default inputs.
+
+```{r sim_df}
+sim_df <- 
+  rep_along(x = 1:1000, c(25, 30)) %>%
+  map_df(~ sim_data(n = .), .id = 'id')
+```
+
+This results in a single data frame containing 1000 datasets for each value of n (here `25` & `30`).
+
+```{r summarize-sim}
+sim_df %>%
+  group_by(id) %>%
+  summarize(given_n = n()) %>%
+  head()
+```
+
+Let's add this calculated value back into the simulated dataframe.
+
+```{r}
+sim_df <- 
+  sim_df %>%
+  group_by(id) %>%
+  mutate(given_n = n()) %>%
+  ungroup()
+```
+
+## Computing results for each simulation
+
+Next, we summarize the median by DCB-group for each simulation so that we can see how well our simulated data matches the observed values in the Rosenberg publication.
+
+```{r median_summary}
+median_summary <- sim_df %>%
+  group_by(id, given_n, group) %>%
+  summarize(median = median(x)) %>% 
+  ungroup() %>%
+  spread(key = group, value = median)
+```
+
+The result is a data frame containing the median values among benefit & non-benefit groups 
+for each simulation.
+
+```{r print-median-summary}
+median_summary %>% head()
+```
+
+Finally, we apply the wilcoxon ranksum (aka Mann Whitney U) test to each sample, and join these results to our summary of medians by group.
+
+```{r sim-results}
+## compute mann whitney u (wilcoxon ranksum) 
+## statistical test for each replicate
+res <- sim_df %>%
+  split(.$id) %>%
+  map_df(~ broom::tidy(wilcox.test(x ~ group, data = .)), .id = 'id') %>%
+  inner_join(median_summary, by='id')
+```
+
+The resulting data.frame contains the results of the analysis for each simulation.
+
+```{r show-df}
+res %>% head()
+```
+
+## Summarizing results
+
+The power to detect an effect at $\alpha$ <= 0.05 is approximated by the proportion of simulations yielding a p-value < $\alpha$.
+
+It is fairly trivial to calculate this as:
+
+```{r summarize-power}
+res %>% 
+  group_by(given_n) %>%
+  summarize(power = mean(p.value < 0.05))
+```
+
+We can also plot the power at different levels of alpha, by computing the cumulative proportion of samples with p<=$\alpha$.
+
+```{r plot-power-by-alpha, echo=FALSE}
+## data-prep for plot of power (cum proportion of samples) by alpha (p-value threshold)
+sum_res <- res %>%
+  dplyr::group_by(given_n, `p.value`) %>%
+  dplyr::summarize(n_pvalue = n()) %>%
+  dplyr::group_by(given_n) %>%
+  dplyr::arrange(`p.value`) %>%
+  dplyr::mutate(total_n = sum(n_pvalue),
+                cum_n = cumsum(n_pvalue),
+                power = cum_n/total_n
+  ) %>%
+  dplyr::rename(alpha = `p.value`) %>%
+  ungroup()
+
+## plot of power by alpha threshold
+ggplot(sum_res, aes(x = alpha, y = power, colour = factor(given_n), group = factor(given_n))) + 
+  geom_line() + 
+  geom_vline(aes(xintercept=0.05), color = 'lightgrey', linetype = 'dashed') +
+  scale_colour_discrete('sample size') +
+  theme_minimal() +
+  ggtitle('Power to detect assoc of mutation load with DCB\n30% of patients benefited, and median load = 12.4 vs 6.4')
+```
+
+## Evaluating quality of simulated datasets
+
+However, it's useful to keep in mind that our power calculation here is only as good as the data simulations we used to generate it.
+
+It's thus equally as important to inspect the simulated data, both graphically and numerically.
+
+Following are some plots that may aid in this process:
+
+```{r plot-simulated-medians, echo=FALSE}
+## plot of simulated median values, for each simulation
+ggplot(res %>% 
+         gather(benefit, non, value = 'simulated_median', key = 'group'),
+       aes(y = simulated_median, x = group, colour=group, group = group)) + 
+  geom_boxplot() +
+  facet_wrap(~given_n) +
+  ggtitle('Distribution of simulated median values by DCB\nShowing results for n=1000 simulations')
+```
+
+```{r plot-example-simulations, echo=FALSE}
+## plot of simulated data from a single simulation, selected at random
+
+sample_groups_ <- function(tbl, group_name, n) {
+  tbl %>% 
+    semi_join(tbl %>%
+                dplyr::distinct_(group_name) %>% 
+                dplyr::sample_n(n) %>% 
+                dplyr::select_(group_name)
+              , on=group_name
+    )
+}
+sim_df %>%
+       sample_groups_(., group_name = 'id', n = 6) %>%
+       dplyr::left_join(res) %>%
+       dplyr::mutate(sim_label = stringr::str_c('Sim ',
+                                                id,
+                                                ' (',
+                                                'n = ', given_n,
+                                                'p = ', format.pval(`p.value`, digits = 2),
+                                                ')')
+                     ) %>%
+  ggplot(., aes(y = x, x = group, colour = group, group = group)) + 
+  geom_boxplot() +
+  facet_wrap(~ sim_label) +
+  ggtitle('Distribution of simulated data by DCB\n(showing results for 6 simulations selected at random)')
+```
+
