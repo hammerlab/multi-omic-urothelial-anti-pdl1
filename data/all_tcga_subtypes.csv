@@ -1,0 +1,26 @@
+patient_id,TCGA Subtype,from_genentech
+0471,1,False
+2278,4,False
+2937,1,False
+3529,4,False
+9723,1,False
+0040,2,True
+0522,2,True
+1233,4,True
+1249,3,True
+1849,4,True
+1994,1,True
+2131,2,True
+2389,1,True
+2849,3,True
+5037,1,True
+5122,4,True
+5338,3,True
+6229,4,True
+6428,4,True
+6800,2,True
+7577,4,True
+7729,2,True
+8728,4,True
+9517,1,True
+9881,3,True
