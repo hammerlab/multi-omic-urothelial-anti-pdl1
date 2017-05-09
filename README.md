@@ -1,4 +1,4 @@
-# Multi-omic analysis of urothelial cancer patients treated with PD-L1 blockade demonstrates the contribution of both systemic and somatic factors to the biology of response and resistance: An exploratory analysis of 29 patients
+# Contribution of systemic and somatic factors to clinical response and resistance in urothelial cancer: An exploratory multi-omic analysis
 
 ## Running the Code
 
