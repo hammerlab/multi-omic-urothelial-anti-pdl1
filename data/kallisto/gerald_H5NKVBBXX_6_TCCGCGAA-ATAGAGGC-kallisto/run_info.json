@@ -1,9 +1,0 @@
-{
-	"n_targets": 180253,
-	"n_bootstraps": 100,
-	"n_processed": 54162850,
-	"kallisto_version": "0.42.3",
-	"index_version": 10,
-	"start_time": "Fri Apr  1 00:10:56 2016",
-	"call": "kallisto quant -i /demeter/scratch/ahujaa01/ksinai-demeter/reference-genome/b37.kallisto.idx -o /demeter/scratch/ahujaa01/ksinai-demeter/work/mskcc-bladder-rna/gerald_H5NKVBBXX_6_TCCGCGAA-ATAGAGGC-kallisto -b 100 -t 8 /demeter/scratch/ahujaa01/ksinai-demeter/work/mskcc-bladder-rna/gerald_H5NKVBBXX_6_TCCGCGAA-ATAGAGGC_R1.fastq /demeter/scratch/ahujaa01/ksinai-demeter/work/mskcc-bladder-rna/gerald_H5NKVBBXX_6_TCCGCGAA-ATAGAGGC_R2.fastq"
-}
