@@ -1,4 +1,8 @@
-# Contribution of systemic and somatic factors to clinical response and resistance in urothelial cancer: An exploratory multi-omic analysis
+# Contribution of systemic and somatic factors to clinical response and resistance in urothelial cancer: an exploratory multi-omic analysis
+
+## Numbers and Figures Linked to Source Analyses
+
+In the interest of full transparency, please note that calculated numbers and figures are directly linked to their source Jupyter notebooks in this repository throughout our [preprint](http://biorxiv.org/content/early/2017/05/11/086843.full.pdf+html).
 
 ## Running the Code
 
